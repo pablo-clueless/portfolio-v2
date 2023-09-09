@@ -1,0 +1,50 @@
+[
+	{
+		"title": "Chatt",
+		"description": "",
+		"image": "https://res.cloudinary.com/pabloclueless/image/upload/v1692783926/portfolio/chatt_xoizbb.png",
+		"url": "https://chatt-mu.vercel.app"
+	},
+	{
+		"title": "TSL",
+		"description": "",
+		"image": "https://res.cloudinary.com/pabloclueless/image/upload/v1692783922/portfolio/tsl_aocyeq.png",
+		"url": "https://tech-solutions.vercel.app"
+	},
+	{
+		"title": "Koin",
+		"description": "",
+		"image": "https://res.cloudinary.com/pabloclueless/image/upload/v1692783903/portfolio/koin_kobqld.png",
+		"url": "https://koin-token.vercel.app"
+	},
+	{
+		"title": "Onboard",
+		"description": "",
+		"image": "https://res.cloudinary.com/pabloclueless/image/upload/v1692783901/portfolio/onboard_e6tctj.png",
+		"url": "https://onboard.com.ng"
+	},
+	{
+		"title": "Traxo Finance",
+		"description": "",
+		"image": "https://res.cloudinary.com/pabloclueless/image/upload/v1692783889/portfolio/traxo_dgvekf.png",
+		"url": "https://master.d16z9rxqclx4lm.amplifyapp.com/"
+	},
+	{
+		"title": "Three-Shirt",
+		"description": "",
+		"image": "https://res.cloudinary.com/pabloclueless/image/upload/v1692783900/portfolio/3shirt_os5lfa.png",
+		"url": "https://3-shirt.vercel.app"
+	},
+	{
+		"title": "Admin Dashboard",
+		"description": "",
+		"image": "https://res.cloudinary.com/pabloclueless/image/upload/v1692783893/portfolio/dashboard_byk7al.png",
+		"url": "https://c-dashboard.vercel.app"
+	},
+	{
+		"title": "Lifted Son",
+		"description": "",
+		"image": "https://res.cloudinary.com/pabloclueless/image/upload/v1694225903/lifted-son_troeuk.png",
+		"url": "https://the-lifted-son.vercel.app/"
+	}
+]

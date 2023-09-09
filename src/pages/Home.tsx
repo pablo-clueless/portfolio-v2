@@ -1,9 +1,16 @@
-import { Footer } from "components"
+import { About, Contact, Footer, Hero, Navbar, Work, Works } from "components"
 
 const Home = () => {
 	return (
 		<>
-			<div className="px-5 lg:px-20"></div>
+			<Navbar />
+			<main className="dark:bg-dark w-full bg-white">
+				<Hero />
+				<About />
+				<Work />
+				<Works />
+				<Contact />
+			</main>
 			<Footer />
 		</>
 	)

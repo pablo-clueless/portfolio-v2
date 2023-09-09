@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -11,8 +11,11 @@
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
 
-	--color-primary: "#081F4A";
-	--color-secondary: "#FFEA00";
+	--primary: #3a53e4;
+	--secondary: #fa2945;
+	--light: #f5f5f8;
+	--mid: #dde0e7;
+	--dark: #29292b;
 }
 
 /* removes scrollbar */
@@ -24,7 +27,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-family: "Barlow", sans-serif;
+	font-family: "Urbanist", sans-serif;
 }
 
 html {
@@ -32,8 +35,14 @@ html {
 }
 
 body {
-	background: #fff;
 	overflow-x: hidden;
+}
+
+nav,
+footer,
+main,
+section {
+	@apply transition-all duration-500;
 }
 
 input,
@@ -64,4 +73,30 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
 	appearance: textfiled;
 	-moz-appearance: textfield;
+}
+
+/* actives the hover effect on the bav links */
+.nav-link {
+	position: relative;
+	text-transform: capitalize;
+	font-weight: 500;
+}
+
+.nav-link::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 0;
+	height: 2px;
+	background: var(--dark);
+	transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.nav-link:hover::before {
+		left: 0;
+		right: auto;
+		width: 100%;
+	}
 }

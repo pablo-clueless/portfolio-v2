@@ -9,22 +9,6 @@ const isTest = process.env.NODE_ENV === "test" || !!process.env.VITE_TEST_BUILD
 
 const resolve = (p: string) => path.resolve(__dirname, p)
 
-// const getStyleSheets = async () => {
-// 	try {
-// 		const assetpath = resolve("dist/assets")
-// 		const files = await fs.readdir(assetpath)
-// 		const cssAssets = files.filter((file) => file.endsWith(".css"))
-// 		const allContent: string[] = []
-// 		for (const asset of cssAssets) {
-// 			const content = await fs.readFile(path.join(assetpath, asset), "utf-8")
-// 			allContent.push(`<style type="text/css">${content}</style>`)
-// 		}
-// 		return allContent.join("\n")
-// 	} catch {
-// 		return ""
-// 	}
-// }
-
 const createSsrServer = async (isProd = process.env.NODE_ENV === "production") => {
 	const app = express()
 	const vite = await createServer({
@@ -46,7 +30,7 @@ const createSsrServer = async (isProd = process.env.NODE_ENV === "production") =
 			})
 		)
 	}
-	// const stylesheets = getStyleSheets()
+
 	app.use("*", async (req: Request, res: Response, next: NextFunction) => {
 		const url = req.originalUrl
 		try {
@@ -59,7 +43,6 @@ const createSsrServer = async (isProd = process.env.NODE_ENV === "production") =
 			const devBuildPath = path.join(__dirname, "./src/entry-server.tsx")
 			const { render } = await vite.ssrLoadModule(isProd ? productionBuildPath : devBuildPath)
 			const appHtml = await render(url)
-			// const cssAssets = isProd ? "" : await stylesheets
 			const html = template.replace(`<!--app-html-->`, appHtml)
 			res.status(200).set({ "Content-Type": "text/html" }).end(html)
 		} catch (e) {

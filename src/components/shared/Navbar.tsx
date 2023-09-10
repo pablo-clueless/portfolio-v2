@@ -23,11 +23,13 @@ const Navbar = () => {
 			className={`dark:bg-dark left-0 top-0 flex w-screen items-center justify-between border-b bg-white px-5 py-4 lg:px-20 ${
 				scrolled ? "fixed" : "static"
 			}`}>
-			<div className="flex items-center justify-center gap-4">
-				<Link to="/" className="border-dark border-r-2 pr-4 dark:border-white">
-					<img src={snap.mode === "dark" ? logo_invert : logo} alt="" className="w-[50px]" />
+			<div className="flex items-center justify-center gap-2 lg:gap-4">
+				<Link to="/" className="border-dark border-r-2 pr-2 dark:border-white lg:pr-4">
+					<img src={snap.mode === "dark" ? logo_invert : logo} alt="" className="w-[30px] lg:w-[50px]" />
 				</Link>
-				<p className="text-dark font-bold uppercase dark:text-white">Samson okunola</p>
+				<p className="text-dark text-xs font-bold uppercase dark:text-white lg:text-base">
+					Samson okunola
+				</p>
 			</div>
 			<div className="">
 				{snap.mode === "dark" ? (

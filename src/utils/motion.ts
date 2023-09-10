@@ -1,61 +1,24 @@
 type AnimationType = "inertia" | "just" | "keyframes" | "spring" | "tween"
 type AnimationDirection = "down" | "left" | "right" | "up"
 
-export const textVariant = (delay: number) => {
-	return {
-		hidden: {
-			y: -50,
-			opacity: 0,
-		},
-		show: {
-			y: 0,
-			opacity: 1,
-			transition: {
-				type: "spring",
-				duration: 1.25,
-				delay,
-			},
-		},
-	}
-}
-
-export const fadeIn = (
-	direction: AnimationDirection,
-	type: AnimationType,
+export const fade = (
 	delay: number,
-	duration: number
+	direction: AnimationDirection,
+	duration: number,
+	type: AnimationType
 ) => {
 	return {
-		hidden: {
+		initial: {
 			x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
 			y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
 			opacity: 0,
 		},
-		show: {
+		whileInView: {
 			x: 0,
 			y: 0,
 			opacity: 1,
 			transition: {
-				type,
-				delay,
-				duration,
-				ease: "easeOut",
-			},
-		},
-	}
-}
-
-export const zoomIn = (delay: number, duration: number) => {
-	return {
-		hidden: {
-			scale: 0,
-			opacity: 0,
-		},
-		show: {
-			scale: 1,
-			opacity: 1,
-			transition: {
-				type: "tween",
+				type: type,
 				delay: delay,
 				duration: duration,
 				ease: "easeOut",
@@ -64,37 +27,51 @@ export const zoomIn = (delay: number, duration: number) => {
 	}
 }
 
-export const slideIn = (
-	direction: AnimationDirection,
-	type: AnimationType,
+export const slide = (
 	delay: number,
-	duration: number
+	direction: AnimationDirection,
+	duration: number,
+	type: AnimationType
 ) => {
 	return {
-		hidden: {
-			x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
-			y: direction === "up" ? "100%" : direction === "down" ? "100%" : 0,
+		initial: {
+			x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
+			y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
 		},
-		show: {
+		whileInView: {
 			x: 0,
 			y: 0,
 			transition: {
-				type,
-				delay,
-				duration,
+				type: type,
+				delay: delay,
+				duration: duration,
 				ease: "easeOut",
 			},
 		},
 	}
 }
 
-export const staggerContainer = (staggerChildren: number, delayChildren: number) => {
+export const zoom = (
+	delay: number,
+	direction: AnimationDirection,
+	duration: number,
+	type: AnimationType
+) => {
 	return {
-		hidden: {},
-		show: {
+		initial: {
+			x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
+			y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+			scale: 0.5,
+		},
+		whileInView: {
+			x: 0,
+			y: 0,
+			scale: 1,
 			transition: {
-				staggerChildren: staggerChildren,
-				delayChildren: delayChildren || 0,
+				type: type,
+				delay: delay,
+				duration: duration,
+				ease: "easeOut",
 			},
 		},
 	}

@@ -1,4 +1,33 @@
-import fragment from "./fragment-shader.glsl"
-import vertex from "./vertex-shader.glsl"
+const metal = `
+uniform vec2 resolution;
+uniform float time;
+void main() {
+  vec2 coord = gl_FragCoord.xy / resolution.xy;
+  vec2 st = coord;
+  vec3 line = vec3(0.0);
 
-export { fragment, vertex }
+  coord *= 4.;
+
+  float len;
+
+  for (int i = 0; i < 15; i++) {
+      len = length(vec2(coord.x, coord.y));
+      coord.x += cos(coord.y + sin(len)) + cos(time * .07) * 0.2;
+      coord.y += sin(coord.x + cos(len)) + sin(time * 0.1);
+  }
+
+  len *= cos(len * 0.4);
+
+  len -= 10.;
+
+  for (float i = 0.0; i < 5.0; i++) {
+      len += 0.11 / abs(mod(st.x, 1.09 * i) * 200.) * 1.;
+  }
+
+  vec3 color = vec3(cos(len + 0.2) * 1.15, cos(len + 0.1), cos(len - 0.05));
+
+  gl_FragColor = vec4(color, 1.0);
+}
+`
+
+export { metal }

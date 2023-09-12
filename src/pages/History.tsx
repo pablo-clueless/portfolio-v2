@@ -6,7 +6,7 @@ const History = () => {
 	return (
 		<>
 			<Navbar />
-			<main className="flex w-full flex-col items-center px-5 py-10 lg:px-20">
+			<main className="flex w-full flex-col items-center bg-black/60 px-5 py-10 lg:px-20">
 				<p className={`${styles.heading} before:content-["experience"]`}>work history</p>
 				<div className="grid w-full grid-cols-1 gap-5 lg:grid-cols-2">
 					{work.map((wrk) => (

@@ -41,6 +41,9 @@ dependencies:
   react-tilt:
     specifier: ^1.0.2
     version: 1.0.2(@types/react-dom@18.2.7)(@types/react@18.2.15)(react-dom@18.2.0)(react@18.2.0)
+  react-vfx:
+    specifier: ^0.5.0
+    version: 0.5.0(react-dom@18.2.0)(react@18.2.0)
   three:
     specifier: ^0.156.1
     version: 0.156.1
@@ -2417,6 +2420,17 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
+  /react-vfx@0.5.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-qqcFrAcZakgnWgW/JYhw5EAJ5dD+I3VeOmO0SNiD15vvvUTU2bGl9/BTSr8M6kSyfqZdwuYWVrhjI0Yw4R+d+g==}
+    peerDependencies:
+      react: '>= 16.12.0'
+      react-dom: '>= 16.12.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      three: 0.130.1
+    dev: false
+
   /react@18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
@@ -2668,6 +2682,10 @@ packages:
       potpack: 1.0.2
       three: 0.156.1
       zstddec: 0.0.2
+    dev: false
+
+  /three@0.130.1:
+    resolution: {integrity: sha512-OSPPKcGvFSiGkG3jFrwwC76PBV/ZSrGxpBbg28bW8s9GU8r/y2spNGtEXHEb/CVqo0Ctf5Lx2rVaxQZB6OasaA==}
     dev: false
 
   /three@0.156.1:

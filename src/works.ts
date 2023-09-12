@@ -1,5 +1,7 @@
 import type { Work } from "types"
 
+import { chatt, dashboard, koin, lifted_son, onboard, three_shirt, traxo, tsl } from "assets"
+
 export const works: Work[] = [
 	{
 		id: "54aa9973-0f32-4dff-8075-936425b14070",
@@ -8,8 +10,7 @@ export const works: Work[] = [
 			"In my journey as a developer, I had the opportunity to conceptualize and create a web-based instant messaging application, enriched with voice-over-IP (VoIP) and video calling capabilities. This project serves as a testament to my technical proficiency and creativity, showcasing my ability to craft a comprehensive communication platform.",
 			"This web app represents a vision of streamlined digital interaction, offering users the convenience of text-based messaging alongside the richness of voice and video calls. It serves as a compelling demonstration of my skills in web development and my commitment to crafting user-centric solutions in the realm of online communication.",
 		],
-		image:
-			"https://res.cloudinary.com/pabloclueless/image/upload/v1692783926/portfolio/chatt_xoizbb.png",
+		image: chatt,
 		url: "https://chatt-mu.vercel.app",
 		category: ["website"],
 		role: ["frontend"],
@@ -21,8 +22,7 @@ export const works: Work[] = [
 			"Technologistics Solutions Ltd is a trusted partner in global shipping solutions. With over a decade of industry expertise and a commitment to excellence, we strive to provide seamless and reliable logistics services tailored to your unique requirements. At Technologistics Solutions Ltd, we understand the importance of efficient and secure transportation in today's interconnected world. Whether you are a business looking to expand your global reach or an individual in need of personal shipping services, we have you covered.",
 			"This was a quick one - quick spin up, done and dusted.",
 		],
-		image:
-			"https://res.cloudinary.com/pabloclueless/image/upload/v1692783922/portfolio/tsl_aocyeq.png",
+		image: tsl,
 		url: "https://tech-solutions.vercel.app",
 		category: ["website"],
 		role: ["frontend"],
@@ -35,8 +35,7 @@ export const works: Work[] = [
 			"The website not only provided valuable insights but also facilitated user engagement through waitlist sign-ups and airdrop participation. It represented my first stride into the fascinating and ever-evolving world of blockchain technology, setting the foundation for future projects aimed at simplifying and democratizing access to decentralized finance and cryptocurrencies.",
 			'Unfornately, the project was not given a green light. I got paid tho. And the I came with the name "Koin", as I couldn\'t use the actual token name.',
 		],
-		image:
-			"https://res.cloudinary.com/pabloclueless/image/upload/v1692783903/portfolio/koin_kobqld.png",
+		image: koin,
 		url: "https://koin-token.vercel.app",
 		category: ["website"],
 		role: ["frontend"],
@@ -48,8 +47,7 @@ export const works: Work[] = [
 			"Onboard is a modern one-stop education and travel solutions offering study abroad assistance and guidance to candidate students from Africa and around the globe. We exist as a TravelTech undertaking with years of experience and an increasingly level of success stories under our belt. Furthermore, Our Travel space is also dedicated to rendering affordable and effective travel assistance, bridging the gap and demystifying borders. Our platform seeks to not only help students advance their academic pursuits, but to also provide hitch free travel packages while offering affordable educational options from our partner institutions in several countries.Our services are also full-proof and certified with favorable reviews over the years. Much more than that Onboard is a growing community of diverse individuals making a change in different spheres around the world.",
 			"Phew! This project was done in the Agile way with lots of spontaneous changes being made due to the nature of the industry and the preference of users.",
 		],
-		image:
-			"https://res.cloudinary.com/pabloclueless/image/upload/v1692783901/portfolio/onboard_e6tctj.png",
+		image: onboard,
 		url: "https://onboard.com.ng",
 		category: ["website"],
 		role: ["frontend"],
@@ -61,8 +59,7 @@ export const works: Work[] = [
 			"Traxo tries to solve a very crucial issue - financial management and auditing. It was designed with investors' and founders interest in mind. This solution aim to serve as an internal auditor for investors, a companion for founders and a helper for finance departments. Traxo leverages budgetting and automation to track and check spending, and curate a concise and timely report.",
 			"This is solution was envisioned by me and is in development. I have a great team working towards getting the app out as soon as possible. Hopefully, we will able to get the app out as soon as possible.",
 		],
-		image:
-			"https://res.cloudinary.com/pabloclueless/image/upload/v1692783889/portfolio/traxo_dgvekf.png",
+		image: traxo,
 		url: "https://master.d16z9rxqclx4lm.amplifyapp.com/",
 		category: ["website", "app"],
 		role: ["frontend", "backend"],
@@ -74,8 +71,7 @@ export const works: Work[] = [
 			"Built with React and Three.js, this platform allows user design 3D shirt mockups with exceptional ease. By allowing users to effortlessly customize shirt colors, apply logos to the front, and overlay intricate decal patterns.",
 			"This immersive experience empowers users to visualize and personalize their shirt designs, catering to a wide array of preferences. Furthermore, the user is able to download the finalized mockup. This is a way to combine user engagement with practical functionality for a memorable user experience.",
 		],
-		image:
-			"https://res.cloudinary.com/pabloclueless/image/upload/v1692783900/portfolio/3shirt_os5lfa.png",
+		image: three_shirt,
 		url: "https://3-shirt.vercel.app",
 		category: ["website"],
 		role: ["frontend"],
@@ -87,8 +83,7 @@ export const works: Work[] = [
 			"The React-based Admin Dashboard is a powerful portfolio project showcasing your web development skills. This dynamic and user-friendly dashboard, built with Syncfusion, provides a comprehensive admin interface that seamlessly manages data, offers data visualization through charts and graphs, and allows easy manipulation of content.",
 			"The dashboard demonstrates proficiency in front-end development, offering an intuitive user experience, responsive design, and efficient data management. Whether it's tracking statistics, managing content, or visualizing data, this project highlights the ability to create functional and aesthetically pleasing web applications.",
 		],
-		image:
-			"https://res.cloudinary.com/pabloclueless/image/upload/v1692783893/portfolio/dashboard_byk7al.png",
+		image: dashboard,
 		url: "https://c-dashboard.vercel.app",
 		category: ["website"],
 		role: ["frontend"],
@@ -99,7 +94,7 @@ export const works: Work[] = [
 		description: [
 			"Lifted Son is a dedicated Christian blog and community with a mission to connect believers, build a supportive community, and guide youths on their spiritual journey to find Christ. Through its faith-centric content, engaging discussions, and special focus on youth empowerment, Lifted Son offers a virtual sanctuary where individuals can deepen their faith, share their experiences, and seek spiritual guidance. It aims to foster a sense of belonging among believers, inspire spiritual growth, and serve as a guiding light for young souls seeking purpose in their Christian walk.",
 		],
-		image: "https://res.cloudinary.com/pabloclueless/image/upload/v1694225903/lifted-son_troeuk.png",
+		image: lifted_son,
 		url: "https://the-lifted-son.vercel.app/",
 		category: ["website"],
 		role: ["frontend", "backend"],
@@ -111,7 +106,7 @@ export const works: Work[] = [
 			"Ebaba is a digital platform designed to seamlessly connect skilled artisans with clients in need of their services. It serves as a one-stop solution for individuals and businesses seeking professionals across various trades and crafts. Clients can easily discover and hire artisans, view detailed profiles, request quotes, and communicate in real-time through the platform. Artisans, in turn, can showcase their expertise, gain exposure, and expand their client base while offering secure payment processing and appointment scheduling. Ebaba aims to simplify the process of finding, collaborating with, and hiring artisans, fostering transparency, trust, and convenience in the artisan service industry.",
 			"The platform is still in progress with a completion of 75%.",
 		],
-		image: "https://res.cloudinary.com/pabloclueless/image/upload/v1694225903/lifted-son_troeuk.png",
+		image: lifted_son,
 		url: "https://ebaba-gray.vercel.app/",
 		category: ["website"],
 		role: ["frontend", "backend"],

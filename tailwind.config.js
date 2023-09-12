@@ -7,6 +7,10 @@ export default {
 			secondary: ["Urbanist", "sans-serif"],
 		},
 		extend: {
+			backgroundImage: {
+				main:
+					"url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5fJlKINj8I4HtUizaLOocDCYqKOph0dPBng&usqp=CAU')",
+			},
 			colors: {
 				primary: "#3A53E4",
 				secondary: "#FA2945",

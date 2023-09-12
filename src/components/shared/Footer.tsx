@@ -3,7 +3,7 @@ import { handles } from "constants"
 
 const Footer = () => {
 	return (
-		<footer className="flex w-full flex-col items-center justify-between gap-5 border-t bg-dark px-5 py-10 lg:flex-row lg:px-20">
+		<footer className="flex w-full flex-col items-center justify-between gap-5 bg-dark px-5 py-10 lg:flex-row lg:px-20">
 			<div className="flex items-center gap-10">
 				<img src={logo_invert} alt="" className="w-[40px]" />
 				<div className="flex items-center justify-center gap-5">

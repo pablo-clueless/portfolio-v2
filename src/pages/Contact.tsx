@@ -1,14 +1,14 @@
 import { LordIcon } from "lord-icon"
 
 import { Navbar } from "components"
-import styles from "utils/styles"
 import { handles } from "constants"
+import styles from "utils/styles"
 
 const Contact = () => {
 	return (
 		<>
 			<Navbar />
-			<main className="flex w-full flex-col items-center px-5 py-10 lg:px-20">
+			<main className="flex w-full flex-col items-center bg-black/60 px-5 py-10 lg:px-20">
 				<p className={`${styles.heading} before:content-["contact"]`}>get in touch</p>
 				<div className="mt-0 w-full lg:mt-20 lg:w-2/3">
 					<div className="flex items-center text-xl text-white lg:text-5xl">

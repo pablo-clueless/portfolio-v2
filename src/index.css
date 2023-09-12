@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -27,7 +27,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-family: "Urbanist", sans-serif;
+	font-family: "Jost", sans-serif;
 }
 
 html {
@@ -35,73 +35,50 @@ html {
 }
 
 body {
+	background: var(--dark);
 	overflow-x: hidden;
-}
-
-nav,
-footer,
-main,
-section {
-	@apply transition-all duration-500;
 }
 
 canvas {
 	width: 100%;
-	height: 90vh;
-}
-
-input,
-textarea {
-	outline: none;
-}
-
-input:-webkit-autofill {
-	transition: background-color 5000s ease-in-out 0s;
-}
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="file"]::-webkit-file-upload-button,
-/* removes ms edge password reveal icon */
-::-ms-reveal {
-	display: none;
-}
-
-/* input:number reset */
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
-}
-
-/* Firefox */
-input[type="number"] {
-	appearance: textfiled;
-	-moz-appearance: textfield;
+	height: 100%;
 }
 
 /* actives the hover effect on the bav links */
-.nav-link {
+.link {
 	position: relative;
-	text-transform: capitalize;
-	font-weight: 500;
 }
 
-.nav-link::before {
+.link::before {
 	content: "";
 	position: absolute;
 	bottom: 0;
 	right: 0;
 	width: 0;
 	height: 2px;
-	background: var(--dark);
+	background: var(--light);
 	transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 @media (hover: hover) and (pointer: fine) {
-	.nav-link:hover::before {
+	.link:hover::before {
 		left: 0;
 		right: auto;
 		width: 100%;
 	}
+}
+
+.link__active::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 2px;
+	background: var(--light);
+}
+
+/* transition */
+.trs {
+	@apply transition-all duration-500;
 }

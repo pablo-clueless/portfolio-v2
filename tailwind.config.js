@@ -16,8 +16,5 @@ export default {
 			},
 		},
 	},
-	variants: {
-		display: ["group", "hover", "focus"],
-	},
 	plugins: [],
 }

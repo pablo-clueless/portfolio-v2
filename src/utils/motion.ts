@@ -10,7 +10,7 @@ export const fade = (
 	return {
 		initial: {
 			x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
-			y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+			y: direction === "up" ? 120 : direction === "down" ? -100 : 0,
 			opacity: 0,
 		},
 		whileInView: {
@@ -36,7 +36,7 @@ export const slide = (
 	return {
 		initial: {
 			x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
-			y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+			y: direction === "up" ? 120 : direction === "down" ? -100 : 0,
 		},
 		whileInView: {
 			x: 0,
@@ -60,7 +60,7 @@ export const zoom = (
 	return {
 		initial: {
 			x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
-			y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+			y: direction === "up" ? 120 : direction === "down" ? -100 : 0,
 			scale: 0.5,
 		},
 		whileInView: {

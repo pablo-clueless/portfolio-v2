@@ -1,5 +1,6 @@
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei"
 import { Canvas, useFrame } from "@react-three/fiber"
+import { Suspense } from "react"
 import * as THREE from "three"
 
 const Model = () => {
@@ -30,8 +31,10 @@ const Scene = () => {
 			shadows
 			camera={{ position: [25, 5, 0], fov: 25 }}
 			gl={{ preserveDrawingBuffer: true }}>
+			<Suspense fallback={null}>
+				<Model />
+			</Suspense>
 			<OrbitControls enableZoom enablePan enableRotate />
-			<Model />
 			<Preload all />
 		</Canvas>
 	)

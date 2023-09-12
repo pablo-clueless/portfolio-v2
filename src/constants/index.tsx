@@ -2,7 +2,15 @@ import { CodepenLogo, GithubLogo, LinkedinLogo, TwitterLogo } from "@phosphor-ic
 
 import { kappari, sun, zummit } from "assets"
 
-export const SOCIAL_HANDLES = [
+export const links = [
+	{ label: "home", to: "/" },
+	{ label: "about", to: "/about" },
+	{ label: "work history", to: "/work" },
+	{ label: "works", to: "/works" },
+	{ label: "contact", to: "/contact" },
+]
+
+export const handles = [
 	{
 		icon: <CodepenLogo />,
 		url: "https://codepen.io/pablo-clueless",
@@ -21,7 +29,7 @@ export const SOCIAL_HANDLES = [
 	},
 ]
 
-export const WORK_HISTORY = [
+export const work = [
 	{
 		id: "one",
 		company: "Zummit Africa",
@@ -47,6 +55,6 @@ export const WORK_HISTORY = [
 		image: sun,
 		date: "January 2018 - December 2019",
 		highlights:
-			"I managed multiple areas of the hotel, including the coffee shop, bar, restaurant, and banquet. Incre",
+			"I managed multiple areas of the hotel, including the coffee shop, bar, restaurant, and banquet. Increaed saled by 30% in 6 months and got promoted twice in a year.",
 	},
 ]

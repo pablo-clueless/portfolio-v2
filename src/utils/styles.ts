@@ -1,5 +1,7 @@
 export default {
-	"section-heading":
-		"uppercase text-4xl lg:text-6xl font-black font-secondary my-5 w-fit text-dark dark:text-white",
-	"section-subheading": "text-lg lg:text-xl text-secondary font-medium w-fit",
+	heading:
+		"uppercase text-2xl lg:text-4xl font-extralight text-white my-40 relative before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 before:text-[70px] before:text-white/10 lg:before:text-[200px] before:font-extralight",
+	subheading: "text-xl lg:text-4xl text-white font-extralight w-fit uppercase",
+	title: "font-extralight uppercase text-white/40",
+	link: "text-white/40 underline underline-offset-2",
 }

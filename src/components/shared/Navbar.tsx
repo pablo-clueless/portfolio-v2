@@ -1,46 +1,33 @@
-import { Moon, Sun } from "@phosphor-icons/react"
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
-import { useSnapshot } from "valtio"
+import { NavLink } from "react-router-dom"
 
-import { logo, logo_invert } from "assets"
-import state from "store"
+import { links } from "constants"
 
 const Navbar = () => {
-	const snap = useSnapshot(state)
 	const [scrolled, setScrolled] = useState(false)
 
-	const toggle = () => (snap.mode === "dark" ? (state.mode = "light") : (state.mode = "dark"))
-
 	useEffect(() => {
-		const handleScrolled = () => setScrolled(window.scrollY > 700)
-		window.addEventListener("scroll", handleScrolled)
-		return () => window.removeEventListener("scroll", handleScrolled)
-	}, [])
+		const handleScroll = () => setScrolled(window.scrollY > 600)
+		window.addEventListener("scroll", handleScroll)
+		return () => window.removeEventListener("scroll", handleScroll)
+	})
 
 	return (
 		<nav
-			className={`dark:bg-dark left-0 top-0 flex w-screen items-center justify-between border-b bg-white px-5 py-4 lg:px-20 ${
+			className={`left-0 top-0 !z-20 flex w-screen items-center justify-center bg-black/40 px-5 py-10 lg:px-20 trs ${
 				scrolled ? "fixed" : "static"
 			}`}>
-			<div className="flex items-center justify-center gap-2 lg:gap-4">
-				<Link to="/" className="border-dark border-r-2 pr-2 dark:border-white lg:pr-4">
-					<img src={snap.mode === "dark" ? logo_invert : logo} alt="" className="w-[30px] lg:w-[50px]" />
-				</Link>
-				<p className="text-dark text-xs font-bold uppercase dark:text-white lg:text-base">
-					Samson okunola
-				</p>
-			</div>
-			<div className="">
-				{snap.mode === "dark" ? (
-					<button onClick={toggle} className="text-xl text-white active:animate-spin">
-						<Sun />
-					</button>
-				) : (
-					<button onClick={toggle} className="text-dark text-xl active:animate-spin">
-						<Moon />
-					</button>
-				)}
+			<div className="flex items-center justify-center gap-4">
+				{links.map((link) => (
+					<NavLink
+						key={link.label}
+						to={link.to}
+						className={({ isActive }) =>
+							`link text-sm font-extralight uppercase text-white ${isActive ? "link__active" : ""}`
+						}>
+						{link.label}
+					</NavLink>
+				))}
 			</div>
 		</nav>
 	)

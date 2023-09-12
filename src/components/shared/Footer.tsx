@@ -1,32 +1,27 @@
-import { useSnapshot } from "valtio"
-
-import { SOCIAL_HANDLES } from "constants/index"
-import { logo, logo_invert } from "assets"
-import state from "store"
+import { logo_invert } from "assets"
+import { handles } from "constants"
 
 const Footer = () => {
-	const snap = useSnapshot(state)
-
 	return (
-		<footer className="border-secondary bg-dark flex w-full flex-col items-center border-t-4 px-5 py-10 dark:bg-white lg:px-20">
-			<img src={snap.mode === "dark" ? logo : logo_invert} alt="" className="w-[50px] lg:w-[65px]" />
-			<div className="my-10 flex items-center justify-center gap-10">
-				{SOCIAL_HANDLES.map(({ icon, url }, index) => (
-					<a
-						key={index}
-						href={url}
-						target="_blank"
-						className="dark:bg-dark rounded-full bg-white p-2 text-base transition-all duration-500 hover:scale-[1.2] lg:text-xl">
-						<span className="text-dark dark:text-white">{icon}</span>
-					</a>
-				))}
+		<footer className="flex w-full flex-col items-center justify-between gap-5 border-t bg-dark px-5 py-10 lg:flex-row lg:px-20">
+			<div className="flex items-center gap-10">
+				<img src={logo_invert} alt="" className="w-[40px]" />
+				<div className="flex items-center justify-center gap-5">
+					{handles.map(({ icon, url }, index) => (
+						<a
+							key={index}
+							href={url}
+							target="_blank"
+							className="rounded-full text-base transition-all duration-500 hover:scale-[1.2] lg:text-2xl">
+							<span className="text-white">{icon}</span>
+						</a>
+					))}
+				</div>
 			</div>
-			<div className="dark:text-dark flex w-full items-center justify-center gap-5 text-xs text-white lg:text-sm">
-				<p className="font-secondary font-medium">
-					<span className="font-light">Copyright &copy;{new Date().getFullYear()}.</span>
-					<span className="ml-1 uppercase">samson okunola</span>
-				</p>
-			</div>
+			<p className="font-secondary text-xs font-medium text-white">
+				<span className="font-light">Copyright &copy;{new Date().getFullYear()}.</span>
+				<span className="ml-1 uppercase">samson okunola</span>
+			</p>
 		</footer>
 	)
 }

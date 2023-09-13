@@ -1,3 +1,4 @@
+import { Pause, Play } from "@phosphor-icons/react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { useSnapshot } from "valtio"
@@ -5,6 +6,7 @@ import { useSnapshot } from "valtio"
 import { handles } from "constants/index"
 import { slide } from "utils/motion"
 import { logo_invert } from "assets"
+import { usePageTitle } from "hooks"
 import state from "store"
 
 const links = [
@@ -16,6 +18,7 @@ const links = [
 
 const Home = () => {
 	const snap = useSnapshot(state)
+	usePageTitle("Home")
 
 	return (
 		<main className="grid h-screen w-full grid-cols-1 transition-all duration-500">
@@ -24,7 +27,11 @@ const Home = () => {
 					<img src={logo_invert} alt="" className="w-[30px] lg:w-[50px]" />
 				</Link>
 				<div className="text-white">
-					<button onClick={() => (state.music = !state.music)}>{snap.music ? "pause" : "play"}</button>
+					<button
+						onClick={() => (state.music = !state.music)}
+						className="trs text-xl active:animate-ping">
+						{snap.music ? <Pause /> : <Play />}
+					</button>
 				</div>
 			</div>
 			<div className="relative h-[75vh] w-full">

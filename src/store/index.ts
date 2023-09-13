@@ -7,7 +7,7 @@ interface State {
 
 const state = proxy<State>({
 	mode: "light",
-	music: true,
+	music: false,
 })
 
 export default state

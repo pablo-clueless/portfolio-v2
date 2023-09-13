@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom"
 import { ArrowCircleRight } from "@phosphor-icons/react"
 
+import { usePageTitle, useScrollToTop } from "hooks"
 import { Footer, Navbar } from "components"
 import { LordIcon } from "lord-icon"
 import styles from "utils/styles"
@@ -9,8 +10,10 @@ import { works } from "works"
 const Work = () => {
 	const navigate = useNavigate()
 	const { id } = useParams()
+	useScrollToTop()
 
 	const work = works.find((work) => work.id === id)
+	usePageTitle(`${String(work?.title)}`)
 	const current = works.findIndex((work) => work.id === id)
 	const next = (current + 1) % works.length
 	const prev = (current - 1 + works.length) % works.length
@@ -83,7 +86,7 @@ const Work = () => {
 					</p>
 				</div>
 				<div className="my-10 flex w-full flex-col items-center">
-					<p className={styles.title}>[ screens ]</p>
+					<p className={styles.title}>[ shots ]</p>
 					<p className="w-full text-center text-white lg:w-2/3"></p>
 				</div>
 			</main>

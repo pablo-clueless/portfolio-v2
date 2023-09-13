@@ -38,11 +38,11 @@ const About = () => {
 							<a href="https://clueless-developer.hashnode.dev/" target="_blank" className={styles.link}>
 								hashnode
 							</a>
-							,contributes to open source at{" "}
+							, contributes to open source at{" "}
 							<a href="https://communitypro.netlify.app/" target="_blank" className={styles.link}>
 								community pro
 							</a>{" "}
-							and ha play pens on{" "}
+							and has play pens on{" "}
 							<a href="https://codepen.io/pablo-clueless" target="_blank" className={styles.link}>
 								codepen
 							</a>

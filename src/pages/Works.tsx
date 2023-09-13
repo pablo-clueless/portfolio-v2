@@ -2,12 +2,15 @@ import { useNavigate } from "react-router-dom"
 import { motion } from "framer-motion"
 import { Tilt } from "react-tilt"
 
+import { usePageTitle, useScrollToTop } from "hooks"
 import { Footer, Navbar } from "components"
 import styles from "utils/styles"
 import { works } from "works"
 
 const Works = () => {
 	const navigate = useNavigate()
+	usePageTitle("Works")
+	useScrollToTop()
 
 	return (
 		<>

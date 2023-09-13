@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom"
 
+import { usePageTitle, useScrollToTop } from "hooks"
 import { Footer, Navbar } from "components"
 import styles from "utils/styles"
 
 const About = () => {
+	usePageTitle("About")
+	useScrollToTop()
+
 	return (
 		<>
 			<Navbar />

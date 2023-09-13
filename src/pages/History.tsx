@@ -1,8 +1,12 @@
+import { usePageTitle, useScrollToTop } from "hooks"
 import { Footer, Navbar } from "components"
 import styles from "utils/styles"
 import { work } from "constants"
 
 const History = () => {
+	usePageTitle("Work History")
+	useScrollToTop()
+
 	return (
 		<>
 			<Navbar />

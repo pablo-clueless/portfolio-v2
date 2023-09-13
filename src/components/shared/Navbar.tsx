@@ -14,7 +14,7 @@ const Navbar = () => {
 
 	return (
 		<nav
-			className={`trs left-0 top-0 !z-20 flex w-screen items-center justify-center bg-black/60 px-5 py-10 lg:px-20 ${
+			className={`trs left-0 top-0 !z-20 flex w-screen items-center justify-center bg-black/80 px-5 py-10 lg:px-20 ${
 				scrolled ? "fixed" : "static"
 			}`}>
 			<div className="flex items-center justify-center gap-4">

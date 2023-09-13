@@ -1,25 +1,16 @@
-import { useNavigate, useParams } from "react-router-dom"
-import { ArrowCircleRight } from "@phosphor-icons/react"
+import { useParams } from "react-router-dom"
 
 import { usePageTitle, useScrollToTop } from "hooks"
-import { Footer, Navbar } from "components"
-import { LordIcon } from "lord-icon"
+import { Footer, Image, Navbar } from "components"
 import styles from "utils/styles"
 import { works } from "works"
 
 const Work = () => {
-	const navigate = useNavigate()
 	const { id } = useParams()
 	useScrollToTop()
 
 	const work = works.find((work) => work.id === id)
 	usePageTitle(`${String(work?.title)}`)
-	const current = works.findIndex((work) => work.id === id)
-	const next = (current + 1) % works.length
-	const prev = (current - 1 + works.length) % works.length
-
-	const onNext = () => navigate(`/works/${works[next].id}`)
-	const onPrev = () => navigate(`/works/${works[prev].id}`)
 
 	if (!work) return null
 
@@ -27,32 +18,12 @@ const Work = () => {
 		<>
 			<Navbar />
 			<main className="flex w-full flex-col items-center bg-black/60 px-5 py-10 lg:px-20">
-				<div className="flex w-full items-center justify-between">
-					<button onClick={onPrev} className="rotate-180">
-						<LordIcon
-							colors={{ primary: "#fff" }}
-							size={24}
-							src="https://cdn.lordicon.com/zmkotitn.json"
-							trigger="hover"
-						/>
-					</button>
-					<button onClick={onNext} className="">
-						<LordIcon
-							colors={{ primary: "#fff" }}
-							size={24}
-							src="https://cdn.lordicon.com/zmkotitn.json"
-							trigger="hover"
-						/>
-					</button>
-				</div>
 				<div className="my-20">
 					<p className={styles.subheading}>{work.title}</p>
 				</div>
-				<img
-					src={work.image}
-					alt={work.title}
-					className="aspect-[2/1] w-full object-cover object-top"
-				/>
+				<div className="aspect-[2/1] w-full">
+					<Image src={work.image} alt={work.title} />
+				</div>
 				<div className="mt-5 flex w-full flex-col items-center justify-center">
 					<p className="text-sm font-medium uppercase text-white lg:text-base">
 						<span className="font-extralight">role: </span>
@@ -72,9 +43,9 @@ const Work = () => {
 					</p>
 					<a
 						href={work.url}
-						className="link group mt-4 flex items-center gap-2 text-lg text-white/40 hover:text-white lg:text-2xl">
+						target="_blank"
+						className="link group mt-4 flex items-center gap-2 text-base text-white/40 hover:text-white lg:text-2xl">
 						{work.url}
-						<ArrowCircleRight className="trs group-hover:-rotate-45" />
 					</a>
 				</div>
 				<div className="my-10 flex w-full flex-col items-center">

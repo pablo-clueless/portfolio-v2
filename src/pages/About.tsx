@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 import { usePageTitle, useScrollToTop } from "hooks"
-import { Footer, Navbar } from "components"
+import { Footer, Image, Navbar } from "components"
 import styles from "utils/styles"
 
 const About = () => {
@@ -13,11 +13,7 @@ const About = () => {
 			<Navbar />
 			<main className="flex w-full flex-col items-center bg-black/60 px-5 py-10 lg:px-20">
 				<p className={`${styles.heading} before:content-["about"]`}>introduction</p>
-				<img
-					src="https://wallpapercave.com/wp/wp10634611.jpg"
-					alt="a picture of samson"
-					className="aspect-[2/1] w-full border object-cover object-top"
-				/>
+				<Image src="https://wallpapercave.com/wp/wp10634611.jpg" alt="a picture of samson" />
 				<div className="my-10 flex w-full flex-col items-center">
 					<p className={styles.title}>[ bio ]</p>
 					<p className="flex w-full flex-col items-center gap-4 text-center text-lg text-white lg:w-2/3 lg:text-xl">
@@ -55,6 +51,10 @@ const About = () => {
 							for availability for freelance work or as part of a team.
 						</span>
 					</p>
+				</div>
+				<div className="my-10 flex w-full flex-col items-center">
+					<p className={styles.title}>[ gallery ]</p>
+					<div className="grid w-full grid-cols-2 lg:grid-cols-4"></div>
 				</div>
 			</main>
 			<Footer />

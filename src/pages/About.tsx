@@ -37,12 +37,16 @@ const About = () => {
 							He is an irregular writer on{" "}
 							<a href="https://clueless-developer.hashnode.dev/" target="_blank" className={styles.link}>
 								hashnode
-							</a>{" "}
-							and contributes to open source at{" "}
+							</a>
+							,contributes to open source at{" "}
 							<a href="https://communitypro.netlify.app/" target="_blank" className={styles.link}>
 								community pro
+							</a>{" "}
+							and ha play pens on{" "}
+							<a href="https://codepen.io/pablo-clueless" target="_blank" className={styles.link}>
+								codepen
 							</a>
-							. He loves to watch anime, read books and play video games to relax.
+							. He loves playing video games, watching anime and reading books.
 						</span>
 						<span>
 							<Link to="/contact" className={styles.link}>

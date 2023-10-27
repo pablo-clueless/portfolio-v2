@@ -5,9 +5,9 @@ import { kappari, sun, zummit } from "assets"
 export const links = [
 	{ label: "home", to: "/" },
 	{ label: "about", to: "/about" },
-	{ label: "work history", to: "/work" },
-	{ label: "works", to: "/works" },
+	{ label: "projects", to: "/projects" },
 	{ label: "contact", to: "/contact" },
+	{ label: "archive", to: "/archive" },
 ]
 
 export const handles = [
@@ -37,7 +37,7 @@ export const work = [
 		image: zummit,
 		date: "Apr 2022 - Active",
 		highlights:
-			"I had major contributions to the core features of Zapi v1 and v2. I boosted productivity and reduced average development time by introducing tools, procedures and processes that ensure faster and better development. I ran and participaed in code reviews and peering coding.",
+			"I had major contributions to the core features of Zapi v1 and v2. I boosted productivity and reduced average development time by introducing tools, procedures and processes that ensure faster and better development. I ran and participated in code reviews and peering coding.",
 	},
 	{
 		id: "two",
@@ -46,7 +46,7 @@ export const work = [
 		image: kappari,
 		date: "Jul 2020 - Jan 2022",
 		highlights:
-			"I developed and maintained web applications, collaborated with designers, product managers, and other developers to create high-quality products, ensuring scalabilty, responsive design and cross-browser compatibility.",
+			"I developed and maintained web applications, collaborated with designers, product managers, and other developers to create high-quality products, ensuring scalability, responsive design and cross-browser compatibility.",
 	},
 	{
 		id: "three",
@@ -55,6 +55,6 @@ export const work = [
 		image: sun,
 		date: "January 2018 - December 2019",
 		highlights:
-			"I managed multiple areas of the hotel, including the coffee shop, bar, restaurant, and banquet. Increaed saled by 30% in 6 months and got promoted twice in a year.",
+			"I managed multiple areas of the hotel, including the coffee shop, bar, restaurant, and banquet. Increased sales by 30% in 6 months and got promoted twice in a year.",
 	},
 ]

@@ -1,11 +1,8 @@
-// shared
+export { default as Card } from "./shared/Card"
 export { default as ErrorFallback } from "./shared/ErrorFallback"
 export { default as Footer } from "./shared/Footer"
 export { default as Loader } from "./shared/Loader"
 export { default as Navbar } from "./shared/Navbar"
-export { default as Player } from "./shared/Player"
 
-// canvas
-export { default as Metal } from "./canvas/Metal"
-export { default as Plane } from "./canvas/Plane"
-export { default as Wave } from "./canvas/Wave"
+//layouts
+export { default as MainLayout } from "./layouts/Main"

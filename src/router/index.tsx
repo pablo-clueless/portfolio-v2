@@ -1,30 +1,26 @@
 import { Route, Routes } from "react-router-dom"
 import { Suspense } from "react"
 
-import { About, Contact, History, Home, Work, Works } from "pages"
+// import { About, All, Contact, Gallery, Home, Works } from "pages"
 import { useConcurrentTransition } from "hooks"
-import { Loader, Plane } from "components"
+import { Loader, MainLayout } from "components"
+import { All } from "pages"
 
 const Router = () => {
 	const location = useConcurrentTransition()
 
 	return (
 		<Suspense fallback={<Loader />}>
-			<div className="relative w-full">
-				<div className="absolute left-0 top-0 !z-[5] w-full">
-					<Routes location={location}>
-						<Route path="/" element={<Home />} />
-						<Route path="/about" element={<About />} />
-						<Route path="/work" element={<History />} />
-						<Route path="/works" element={<Works />} />
-						<Route path="/works/:id" element={<Work />} />
-						<Route path="/contact" element={<Contact />} />
-					</Routes>
-				</div>
-				<div className="fixed left-0 top-0 h-screen w-full bg-black/60">
-					<Plane />
-				</div>
-			</div>
+			<Routes location={location}>
+				<Route path="/" element={<MainLayout />}>
+					<Route index element={<All />} />
+					{/* <Route index element={<Home />} />
+					<Route path="/about" element={<About />} />
+					<Route path="/contact" element={<Contact />} />
+					<Route path="/projects" element={<Works />} />
+					<Route path="/archive" element={<Gallery />} /> */}
+				</Route>
+			</Routes>
 		</Suspense>
 	)
 }

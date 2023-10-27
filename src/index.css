@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Jost:wght@200;300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -35,7 +35,7 @@ html {
 }
 
 body {
-	background: var(--dark);
+	background: var(--light);
 	overflow-x: hidden;
 	user-select: none;
 }
@@ -57,7 +57,7 @@ canvas {
 	right: 0;
 	width: 0;
 	height: 2px;
-	background: var(--secondary);
+	background: var(--dark);
 	transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -82,4 +82,9 @@ canvas {
 /* transition */
 .trs {
 	@apply transition-all duration-500;
+}
+
+/* flex */
+.row {
+	@apply flex items-center gap-2;
 }

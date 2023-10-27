@@ -1,11 +1,16 @@
-export type Work = {
-	category: string[]
-	description: string[]
+export type ProjectProps = {
+	category: string
 	id: string
 	image: string
-	role: string[]
 	title: string
 	url: string
+	color: string
+}
+
+export type ArchiveProps = {
+	id: string
+	image: string
+	title: string
 }
 
 type LordIconTrigger = "hover" | "click" | "loop" | "loop-on-hover" | "morph" | "morph-two-way"

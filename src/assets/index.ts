@@ -1,22 +1,27 @@
+import threejs_shaders from "./images/threejs-shaders.png"
 import logo_invert from "./images/logo-invert.png"
 import three_shirt from "./images/three-shirt.png"
 import lifted_son from "./images/lifted-son.png"
 import dashboard from "./images/dashboard.png"
+import zummit_ai from "./images/zummit-ai.png"
 import kappari from "./images/kappari.jpeg"
 import onboard from "./images/onboard.png"
 import zummit from "./images/zummit.jpeg"
-import banner from "./images/banner.png"
 import chatt from "./images/chatt.png"
+import ebaba from "./images/ebaba.png"
 import traxo from "./images/traxo.png"
 import koin from "./images/koin.png"
 import logo from "./images/logo.png"
 import sun from "./images/sun.png"
 import tsl from "./images/tsl.png"
 
+import hero_video from "./videos/hero-video.mp4"
+
 export {
-	banner,
 	chatt,
 	dashboard,
+	ebaba,
+	hero_video,
 	kappari,
 	koin,
 	lifted_son,
@@ -25,7 +30,9 @@ export {
 	onboard,
 	sun,
 	three_shirt,
+	threejs_shaders,
 	traxo,
 	tsl,
 	zummit,
+	zummit_ai,
 }

@@ -4,7 +4,7 @@ export default {
 	darkMode: "class",
 	theme: {
 		fontFamily: {
-			secondary: ["Urbanist", "sans-serif"],
+			secondary: ["Architects Daughter", "cursive"],
 		},
 		extend: {
 			backgroundImage: {

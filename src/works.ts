@@ -6,6 +6,7 @@ import {
 	ebaba,
 	koin,
 	lifted_son,
+	nexus,
 	onboard,
 	three_shirt,
 	threejs_shaders,
@@ -101,6 +102,14 @@ export const projects: ProjectProps[] = [
 		image: threejs_shaders,
 		url: "https://threejs-shaders-rgb-effect.vercel.app/",
 		category: "website",
+		color: "#394C6E",
+	},
+	{
+		id: "fda6c4ce-1b05-4580-bc6f-491a946db4a1",
+		title: "Nexus",
+		image: nexus,
+		url: "https://nexus-llc.vercel.app/",
+		category: "digital product",
 		color: "#394C6E",
 	},
 ]

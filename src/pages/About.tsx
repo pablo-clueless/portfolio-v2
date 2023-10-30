@@ -1,10 +1,15 @@
+import { IdentificationBadge } from "@phosphor-icons/react"
+
 import styles from "utils/styles"
 
 const About = () => {
 	return (
 		<main className="flex w-full flex-col px-5 lg:px-40">
 			<div className="flex w-full flex-col py-10">
-				<p className={styles.heading}>About</p>
+				<p className={styles.heading}>
+					<IdentificationBadge />
+					About
+				</p>
 				<div className="my-10 flex w-full flex-col">
 					<p className="flex w-full flex-col gap-4 text-lg font-light text-dark lg:w-2/3 lg:text-xl">
 						<span>

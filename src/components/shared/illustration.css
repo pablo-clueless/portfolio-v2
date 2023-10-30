@@ -1,0 +1,138 @@
+.background {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	background-color: #fcf8db;
+
+	--black: #00202a;
+	--white: #f8f8f8;
+	--gold: #ffd700;
+	--skin: #743d2b;
+	--dark-skin: #743d2b;
+	--light-skin: #b06c49;
+	--hair: #464747;
+	--dark-hair: #564f52;
+}
+
+.person,
+.person::before,
+.person::after,
+.person *,
+.person *::after,
+.person *::before {
+	position: absolute;
+	content: "";
+}
+
+/* PERSON */
+/* body */
+.person {
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 100px;
+	background: 
+			/* collarbone */
+		linear-gradient(var(--skin), var(--skin)) 45px 35px / 95px 2px no-repeat,
+		/* skin */ radial-gradient(var(--light-skin) 70%, transparent 0) 0 -50px / 100% 130% no-repeat;
+	border-radius: 50%;
+	translate: -90px 60px;
+}
+
+/* neck */
+.person::before {
+	top: -90px;
+	left: 60px;
+	width: 80px;
+	height: 100px;
+	background: linear-gradient(140deg, var(--skin) 50%, transparent calc(50% + 1px)),
+		var(--light-skin);
+	-webkit-mask-image: linear-gradient(80deg, black 80%, transparent calc(80% + 1px));
+}
+
+/* ear and hair */
+.person__head {
+	top: -145px;
+	left: 5px;
+	width: 50px;
+	height: 50px;
+	background: var(--dark-skin);
+	border-radius: 50%;
+	box-shadow:
+			/* ear */
+		135px 0 var(--light-skin),
+		/* front hair */ 120px -40px 0 10px var(--hair),
+		80px -60px var(--hair),
+		30px -100px 0 15px var(--hair),
+		/* back hair */ 25px -50px 0 10px var(--dark-hair),
+		80px -70px 0 10px var(--dark-hair);
+}
+
+/* head */
+.person__head::before {
+	top: -30px;
+	left: 25px;
+	width: 130px;
+	aspect-ratio: 1/1;
+	background: 
+			/* hair */
+		linear-gradient(-150deg, var(--hair) 29%, transparent 0),
+		/* nose */ linear-gradient(100deg, var(--skin) 35%, transparent calc(35% + 1px)) 0 70px no-repeat,
+		linear-gradient(100deg, var(--skin) 35%, transparent calc(35% + 1px)),
+		/* skin */ var(--light-skin);
+	border-radius: 50%;
+}
+
+/* smile */
+.person__head::after {
+	top: 45px;
+	left: 40px;
+	width: 60px;
+	height: 23px;
+	border-radius: 0 0 50% 50%;
+	box-shadow: inset 0 -13px 0 -10px var(--dark-skin);
+}
+
+/* eyes */
+.person__face {
+	top: 15px;
+	left: 35px;
+	width: 8px;
+	height: 8px;
+	background: var(--black);
+	border-radius: 50%;
+	box-shadow: 65px 0 var(--black);
+	animation: blink 1s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+/* hair */
+.person__face::before {
+	top: -85px;
+	left: -20px;
+	width: 330px;
+	height: 120px;
+	border-radius: 0 0 0 100%;
+	box-shadow: inset 120px 0 0 -50px var(--hair);
+}
+
+/* glasses */
+.person__face::after {
+	top: -15px;
+	left: -28px;
+	width: 60px;
+	aspect-ratio: 3/2;
+	border: 2px solid var(--gold);
+	border-radius: 45% 45% 95% 95%;
+	filter: drop-shadow(75px 0 var(--gold));
+}
+
+@keyframes blink {
+	0%,
+	100% {
+		height: 8px;
+	}
+	25% {
+		height: 2px;
+	}
+}

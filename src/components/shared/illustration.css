@@ -103,7 +103,6 @@
 	background: var(--black);
 	border-radius: 50%;
 	box-shadow: 65px 0 var(--black);
-	animation: blink 1s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
 
 /* hair */
@@ -125,14 +124,4 @@
 	border: 2px solid var(--gold);
 	border-radius: 45% 45% 95% 95%;
 	filter: drop-shadow(75px 0 var(--gold));
-}
-
-@keyframes blink {
-	0%,
-	100% {
-		height: 8px;
-	}
-	25% {
-		height: 2px;
-	}
 }

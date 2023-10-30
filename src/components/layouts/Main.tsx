@@ -6,7 +6,7 @@ const Main = () => {
 	return (
 		<div className="h-screen w-screen overflow-x-hidden">
 			<Navbar />
-			<div className="min-h-[50vh] w-full overflow-y-scroll">
+			<div className="w-full overflow-x-hidden">
 				<Outlet />
 			</div>
 			<Footer />

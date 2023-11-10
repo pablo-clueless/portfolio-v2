@@ -1,3 +1,4 @@
+export { default as BlogCard } from "./shared/BlogCard"
 export { default as Card } from "./shared/Card"
 export { default as ErrorFallback } from "./shared/ErrorFallback"
 export { default as Footer } from "./shared/Footer"

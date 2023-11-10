@@ -1,0 +1,31 @@
+query FetchAllPosts {
+	user(username: "pablo-clueless") {
+		publications(first: 1) {
+			edges {
+				node {
+					posts(first: 0) {
+						edges {
+							node {
+								id
+								title
+								slug
+								subtitle
+								tags {
+									id
+									name
+								}
+								url
+								coverImage {
+									url
+								}
+								readTimeInMinutes
+								publishedAt
+								brief
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

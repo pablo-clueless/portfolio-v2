@@ -9,17 +9,21 @@
 		"format": "prettier --write \"src/**/*.ts\"",
 		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview",
+		"generate": "graphql-codegen --config ./graphql.codegen.yaml",
 		"test": "mocha ./**/*.test.[jt]s?(x)"
 	},
 	"dependencies": {
+		"@apollo/client": "^3.8.7",
 		"@phosphor-icons/react": "^2.0.10",
 		"@react-spring/three": "^9.7.3",
 		"@react-three/drei": "^9.83.8",
 		"@react-three/fiber": "^8.14.1",
 		"framer-motion": "^10.16.4",
+		"graphql": "^16.8.1",
 		"lord-icon-element": "^4.1.1",
 		"lottie-web": "^5.12.2",
 		"maath": "^0.7.0",
+		"prismjs": "^1.29.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-error-boundary": "^4.0.11",
@@ -30,6 +34,11 @@
 		"valtio": "^1.11.2"
 	},
 	"devDependencies": {
+		"@graphql-codegen/cli": "^5.0.0",
+		"@graphql-codegen/typescript": "^4.0.1",
+		"@graphql-codegen/typescript-graphql-request": "^6.0.1",
+		"@graphql-codegen/typescript-operations": "^4.0.1",
+		"@types/prismjs": "^1.26.3",
 		"@types/react": "^18.2.15",
 		"@types/react-dom": "^18.2.7",
 		"@types/three": "^0.156.0",

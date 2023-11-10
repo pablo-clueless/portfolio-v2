@@ -1,0 +1,31 @@
+query FetchPostById($slug: String!) {
+	user(username: "pablo-clueless") {
+		publications(first: 1) {
+			edges {
+				node {
+					post(slug: $slug) {
+						id
+						title
+						slug
+						subtitle
+						tags {
+							id
+							name
+						}
+						url
+						coverImage {
+							url
+						}
+						readTimeInMinutes
+						publishedAt
+						brief
+						content {
+							markdown
+							html
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,15 +1,12 @@
+import { Newspaper } from "@phosphor-icons/react"
 import { gql, useQuery } from "@apollo/client"
 import { useEffect, useState } from "react"
 
-import { Publication } from "../../generated/graphql"
-import Contact from "./Contact"
-import Works from "./Works"
-import Blogs from "./Blogs"
-import About from "./About"
-import Home from "./Home"
-import { Loader } from "components"
+import { PostEdge, Publication } from "../../generated/graphql"
+import { BlogCard, Loader } from "components"
+import styles from "utils/styles"
 
-const All = () => {
+const AllBlogs = () => {
 	const [publication, setPublication] = useState<Publication>()
 
 	const query = gql`
@@ -44,14 +41,17 @@ const All = () => {
 	if (loading) return <Loader />
 
 	return (
-		<>
-			<Home />
-			<About />
-			<Works />
-			{publication && <Blogs publication={publication} />}
-			<Contact />
-		</>
+		<main className="flex h-full w-full flex-col px-5 py-10 lg:px-40">
+			<p className={styles.heading}>
+				<Newspaper />
+				blogposts
+			</p>
+			<div className="mt-10 grid w-full grid-cols-1 gap-4 lg:grid-cols-4">
+				{publication &&
+					publication.posts.edges.map((post: PostEdge) => <BlogCard key={post.node.id} {...post} />)}
+			</div>
+		</main>
 	)
 }
 
-export default All
+export default AllBlogs

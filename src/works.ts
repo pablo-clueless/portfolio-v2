@@ -26,7 +26,7 @@ export const projects: ProjectProps[] = [
 	},
 	{
 		id: "27e5f209-5a6a-456a-bd6f-5289bb149744",
-		title: "Technologistics Solution Ltd",
+		title: "TSL",
 		image: tsl,
 		url: "https://tech-solutions.vercel.app",
 		category: "website",
@@ -94,7 +94,7 @@ export const projects: ProjectProps[] = [
 		image: zummit_ai,
 		url: "https://development.d23rav6l6c7mra.amplifyapp.com/",
 		category: "website",
-		color: "#394C6E",
+		color: "#FFEA00",
 	},
 	{
 		id: "c80ccf01-4355-401e-b0f6-8abbf8d2e47d",
@@ -110,6 +110,6 @@ export const projects: ProjectProps[] = [
 		image: nexus,
 		url: "https://nexus-llc.vercel.app/",
 		category: "digital product",
-		color: "#394C6E",
+		color: "#3A53E4",
 	},
 ]

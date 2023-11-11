@@ -1,9 +1,10 @@
 import { Newspaper } from "@phosphor-icons/react"
 import { gql, useQuery } from "@apollo/client"
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 import { PostEdge, Publication } from "../../generated/graphql"
-import { BlogCard, Loader } from "components"
+import { Loader } from "components"
 import styles from "utils/styles"
 
 const AllBlogs = () => {
@@ -23,6 +24,7 @@ const AllBlogs = () => {
 								url
 							}
 							publishedAt
+							views
 						}
 					}
 				}
@@ -46,10 +48,21 @@ const AllBlogs = () => {
 				<Newspaper />
 				blogposts
 			</p>
-			<div className="mt-10 grid w-full grid-cols-1 gap-4 lg:grid-cols-4">
+			<ul className="cool-list mt-10 flex w-full flex-col gap-4">
 				{publication &&
-					publication.posts.edges.map((post: PostEdge) => <BlogCard key={post.node.id} {...post} />)}
-			</div>
+					publication.posts.edges.map((post: PostEdge) => (
+						<li key={post.node.id} className="">
+							<div className="flex w-full items-center justify-between">
+								<Link to={`/blog/${post.node.slug}`} className="link text-xl font-light lg:text-2xl">
+									{post.node.title}
+								</Link>
+								<p className="text-xs font-medium lg:text-sm">
+									{new Date(post.node.publishedAt).toDateString()}
+								</p>
+							</div>
+						</li>
+					))}
+			</ul>
 		</main>
 	)
 }

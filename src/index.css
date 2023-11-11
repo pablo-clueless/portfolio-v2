@@ -40,11 +40,6 @@ body {
 	user-select: none;
 }
 
-canvas {
-	width: 100%;
-	height: 100%;
-}
-
 /* actives the hover effect on the bav links */
 .link {
 	position: relative;
@@ -89,7 +84,7 @@ canvas {
 	@apply flex items-center gap-2;
 }
 
-/* Hashnode content */
+/* markdown content */
 .markdown {
 	margin: 1rem 0;
 	width: full;
@@ -144,4 +139,16 @@ canvas {
 	font-size: 1.25rem;
 	margin: 0.5rem 0;
 	padding: 0.25rem 0.5rem;
+}
+
+/* cool list icon */
+.cool-list li {
+	display: flex;
+	align-items: center;
+	padding-left: 1rem;
+	text-indent: 0.7rem;
+}
+
+.cool-list li::before {
+	content: "🚀";
 }

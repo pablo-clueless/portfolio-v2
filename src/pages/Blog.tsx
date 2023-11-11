@@ -1,4 +1,4 @@
-import { ArrowLeft, Article } from "@phosphor-icons/react"
+import { ArrowLeft, Article, Eye } from "@phosphor-icons/react"
 import { useNavigate, useParams } from "react-router-dom"
 import { gql, useQuery } from "@apollo/client"
 import { useEffect, useState } from "react"
@@ -36,6 +36,7 @@ const Blog = () => {
 						markdown
 						html
 					}
+					views
 				}
 			}
 		}
@@ -81,6 +82,10 @@ const Blog = () => {
 								</p>
 							))}
 						</div>
+						<p className="flex items-center gap-1 text-sm font-semibold">
+							<Eye />
+							{publication.post?.views}
+						</p>
 					</div>
 					<img
 						src={publication.post?.coverImage?.url}

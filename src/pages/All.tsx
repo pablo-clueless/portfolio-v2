@@ -26,6 +26,7 @@ const All = () => {
 								url
 							}
 							publishedAt
+							views
 						}
 					}
 				}

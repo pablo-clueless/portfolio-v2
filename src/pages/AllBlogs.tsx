@@ -48,18 +48,13 @@ const AllBlogs = () => {
 				<Newspaper />
 				blogposts
 			</p>
-			<ul className="cool-list mt-10 flex w-full flex-col gap-4">
+			<ul className="mt-10 flex w-full list-disc flex-col gap-4">
 				{publication &&
 					publication.posts.edges.map((post: PostEdge) => (
-						<li key={post.node.id} className="">
-							<div className="flex w-full items-center justify-between">
-								<Link to={`/blog/${post.node.slug}`} className="link text-xl font-light lg:text-2xl">
-									{post.node.title}
-								</Link>
-								<p className="text-xs font-medium lg:text-sm">
-									{new Date(post.node.publishedAt).toDateString()}
-								</p>
-							</div>
+						<li key={post.node.id} className="list-item">
+							<Link to={`/blog/${post.node.slug}`} className="link text-xl font-light lg:text-2xl">
+								{post.node.title}
+							</Link>
 						</li>
 					))}
 			</ul>

@@ -4,7 +4,7 @@ import styles from "utils/styles"
 
 const Contact = () => {
 	return (
-		<main className="flex h-full w-full flex-col px-5 py-10 lg:px-40">
+		<section className="flex h-full w-full flex-col px-5 py-10 lg:px-40">
 			<p className={styles.heading}>
 				<MegaphoneSimple />
 				get in touch
@@ -23,7 +23,7 @@ const Contact = () => {
 					</a>
 				</div>
 			</div>
-		</main>
+		</section>
 	)
 }
 

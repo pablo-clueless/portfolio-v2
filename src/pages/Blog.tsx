@@ -6,13 +6,16 @@ import Prism from "prismjs"
 import "prismjs/themes/prism-tomorrow.css"
 
 import { Publication } from "../../generated/graphql"
+import { usePageTitle, useScrollToTop } from "hooks"
 import { Loader } from "components"
 import styles from "utils/styles"
 
 const Blog = () => {
 	const [publication, setPublication] = useState<Publication | null>(null)
+	usePageTitle(`${publication?.post?.title}`)
 	const slug = useParams().slug as string
 	const navigate = useNavigate()
+	useScrollToTop()
 
 	const query = gql`
 		query FetchPost($slug: String!) {
@@ -74,8 +77,8 @@ const Blog = () => {
 							{new Date(publication.post?.publishedAt).toLocaleDateString()}
 						</p>
 					</div>
-					<div className="flex w-full items-center justify-between">
-						<div className="flex items-center gap-2">
+					<div className="flex w-full flex-wrap items-center justify-between">
+						<div className="flex flex-wrap items-center gap-2">
 							{publication.post?.tags?.map((tag) => (
 								<p key={tag.id} className={styles.tag}>
 									{tag.name}

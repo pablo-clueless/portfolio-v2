@@ -1,0 +1,12 @@
+.hero {
+	--light: #f5f5f8;
+	--dark: #29292b;
+
+	background: repeating-linear-gradient(
+		90deg,
+		transparent,
+		var(--dark) 1px,
+		transparent 1px,
+		var(--light) 100px
+	);
+}

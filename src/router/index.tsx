@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom"
 import { Suspense } from "react"
 
+import { Blog, Blogs, Home, Projects } from "pages"
 import { useConcurrentTransition } from "hooks"
 import { Loader, MainLayout } from "components"
-import { All, AllBlogs, Blog } from "pages"
 
 const Router = () => {
 	const location = useConcurrentTransition()
@@ -12,9 +12,10 @@ const Router = () => {
 		<Suspense fallback={<Loader />}>
 			<Routes location={location}>
 				<Route path="/" element={<MainLayout />}>
-					<Route index element={<All />} />
-					<Route path="blog/" element={<AllBlogs />} />
+					<Route index element={<Home />} />
+					<Route path="blog/" element={<Blogs />} />
 					<Route path="blog/:slug" element={<Blog />} />
+					<Route path="project" element={<Projects />} />
 				</Route>
 			</Routes>
 		</Suspense>

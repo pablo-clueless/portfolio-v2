@@ -7,6 +7,15 @@ export type ProjectProps = {
 	color: string
 }
 
+export type ExperiencesProps = {
+	id: string
+	company: string
+	role: string
+	image: string
+	date: string
+	highlights: string
+}
+
 export type ArchiveProps = {
 	id: string
 	image: string

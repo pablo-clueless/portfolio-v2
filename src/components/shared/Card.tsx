@@ -12,7 +12,7 @@ const Card = (props: Props) => {
 
 	return (
 		<a href={data.url} target="_blank">
-			<div className="group aspect-square w-full overflow-hidden rounded-bl-[45px] bg-black transition-all">
+			<div className="group aspect-square w-full overflow-hidden bg-black transition-all">
 				<div style={{ background: data.color }} className="h-2/3 w-full p-3">
 					<img
 						src={data.image}

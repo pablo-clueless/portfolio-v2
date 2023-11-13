@@ -74,7 +74,9 @@ const Blog = () => {
 					<div className="flex w-full flex-col items-start justify-between lg:flex-row lg:items-center">
 						<p className={styles["blog-subtitle"]}>{publication.post?.subtitle}</p>
 						<p className={styles["blog-subtitle"]}>
-							{new Date(publication.post?.publishedAt).toLocaleDateString()}
+							{new Date(publication.post?.publishedAt).toLocaleDateString("en-NG", {
+								dateStyle: "medium",
+							})}
 						</p>
 					</div>
 					<div className="flex w-full flex-wrap items-center justify-between">
@@ -93,7 +95,7 @@ const Blog = () => {
 					<img
 						src={publication.post?.coverImage?.url}
 						alt={publication.post?.title}
-						className="my-4 aspect-[2/1] w-full"
+						className="my-4 aspect-[2/1] w-full border-2"
 					/>
 					<div
 						className="markdown w-full"

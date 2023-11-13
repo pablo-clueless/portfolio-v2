@@ -1,0 +1,41 @@
+.loader {
+	width: 100dvw;
+	height: 100dvh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: grid;
+	place-items: center;
+	background: var(--dark);
+}
+
+.progress,
+.progress-bar {
+	height: 4px;
+	border-radius: 4px;
+}
+
+.progress {
+	width: 90%;
+	background: var(--light);
+	position: relative;
+	overflow: hidden;
+}
+
+.progress-bar {
+	width: 10%;
+	background: var(--primary);
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: slider 1500ms infinite;
+}
+
+@keyframes slider {
+	from {
+		left: 0;
+	}
+	to {
+		left: 100%;
+	}
+}

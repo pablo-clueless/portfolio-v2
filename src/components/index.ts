@@ -6,6 +6,7 @@ export { default as Illustration } from "./shared/Illustration"
 export { default as Image } from "./shared/Image"
 export { default as Loader } from "./shared/Loader"
 export { default as Navbar } from "./shared/Navbar"
+export { default as Pagination } from "./shared/Pagination"
 export { default as WorkCard } from "./shared/WorkCard"
 
 //layouts

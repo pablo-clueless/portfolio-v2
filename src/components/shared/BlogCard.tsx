@@ -7,18 +7,19 @@ const BlogCard = (props: PostEdge) => {
 	const { node } = props
 
 	return (
-		<Link to={`/blog/${node.slug}`}>
-			<div className="aspect-square w-full rounded border-2 border-gray-400 bg-light p-4 text-dark transition-all duration-300 hover:shadow-2xl">
-				<div className="mb-10 flex w-full items-center justify-between text-xs">
-					<p className="font-semibold">{new Date(node.publishedAt).toLocaleDateString()}</p>
-					<p className="flex items-center gap-1">
-						<Eye />
-						{node.views}
-					</p>
-				</div>
-				<p className="min-h-[25%] text-3xl">{node.title}</p>
-				<p className="my-2 text-sm font-semibold">{node.subtitle}</p>
+		<Link
+			to={`/blog/${node.slug}`}
+			key={node.id}
+			className="flex w-full flex-col rounded bg-gray-500 p-3 text-white transition-colors duration-300 hover:bg-primary/75">
+			<div className="flex w-full items-center justify-between text-[10px] font-semibold lg:text-xs">
+				<p>{new Date(node.publishedAt).toLocaleDateString("en-NG")}</p>
+				<p className="flex items-center gap-1">
+					<Eye />
+					{node.views}
+				</p>
 			</div>
+			<p className="my-1 w-fit font-light lg:text-2xl">{node.title}</p>
+			<p className="text-xs lg:text-sm">{node.brief}</p>
 		</Link>
 	)
 }

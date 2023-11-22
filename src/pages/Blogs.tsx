@@ -4,15 +4,21 @@ import { useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 
 import { PostEdge, Publication } from "../../generated/graphql"
+import { BlogCard, Loader, Pagination } from "components"
 import { usePageTitle, useScrollToTop } from "hooks"
-import { BlogCard, Loader } from "components"
 import styles from "utils/styles"
+
+const PAGE_SIZE = 12
 
 const AllBlogs = () => {
 	const [publication, setPublication] = useState<Publication>()
+	const [current, setCurrent] = useState(1)
 	const navigate = useNavigate()
 	usePageTitle("Blog")
 	useScrollToTop()
+
+	const startIndex = (current - 1) * PAGE_SIZE
+	const endIndex = startIndex + PAGE_SIZE
 
 	const query = gql`
 		query FetchAllPosts($host: String!) {
@@ -41,6 +47,21 @@ const AllBlogs = () => {
 		variables: { host: "clueless-developer.hashnode.dev" },
 	})
 
+	const onPageChange = (value: number) => setCurrent(value)
+
+	const handlePagination = () => {
+		if (publication && publication.posts.edges.length > PAGE_SIZE) {
+			return (
+				<Pagination
+					current={current}
+					onPageChange={onPageChange}
+					pageSize={PAGE_SIZE}
+					total={publication.posts.edges.length}
+				/>
+			)
+		}
+	}
+
 	useEffect(() => {
 		setPublication(data?.publication)
 	}, [data])
@@ -61,8 +82,11 @@ const AllBlogs = () => {
 			</p>
 			<div className="mt-10 grid w-full grid-cols-1 gap-4 lg:grid-cols-4">
 				{publication &&
-					publication.posts.edges.map((post: PostEdge) => <BlogCard key={post.node.id} {...post} />)}
+					publication.posts.edges
+						.map((post: PostEdge) => <BlogCard key={post.node.id} {...post} />)
+						.slice(startIndex, endIndex)}
 			</div>
+			{handlePagination()}
 		</main>
 	)
 }

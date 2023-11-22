@@ -2,6 +2,6 @@ import { useEffect } from "react"
 
 export const useScrollToTop = () => {
 	useEffect(() => {
-		window.scrollTo(0, 0)
+		window.scrollTo({ behavior: "smooth", left: 0, top: 0 })
 	}, [])
 }

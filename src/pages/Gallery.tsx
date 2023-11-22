@@ -1,7 +1,11 @@
+import { usePageTitle, useScrollToTop } from "hooks"
 import styles from "utils/styles"
 import { archive } from "archive"
 
 const Gallery = () => {
+	usePageTitle("Gallery")
+	useScrollToTop()
+
 	return (
 		<main className="flex w-full flex-col px-5 lg:px-40">
 			<div className="flex w-full flex-col py-10">

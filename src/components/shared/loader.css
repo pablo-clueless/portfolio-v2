@@ -16,7 +16,7 @@
 }
 
 .progress {
-	width: 90%;
+	width: 75%;
 	background: var(--light);
 	position: relative;
 	overflow: hidden;

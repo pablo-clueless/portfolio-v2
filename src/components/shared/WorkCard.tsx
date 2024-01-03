@@ -1,20 +1,18 @@
-import {} from "react"
-
 import { ExperiencesProps } from "types"
 
-interface Props {
-	data: ExperiencesProps
-	index: number | string
-}
-
-const WorkCard = (props: Props) => {
-	const { data, index } = props
-
+const WorkCard = (props: ExperiencesProps) => {
 	return (
-		<div className="h-auto w-full p-1">
-			<p className="text-8xl font-thin">{index}</p>
-			<p className="text-base font-light lg:text-lg">{data.company}</p>
-			<p className="text-xs font-semibold lg:text-sm">{data.role}</p>
+		<div className="h-auto w-full p-2">
+			<div className="flex w-full items-center justify-between">
+				<div className="flex items-center gap-1">
+					<p className="text-base font-medium lg:text-lg">{props.company}</p>
+				</div>
+				<p className={`text-sm font-semibold ${props.active ? "text-green-500" : "text-red-500"}`}>
+					{props.date}
+				</p>
+			</div>
+			<p className="my-2 text-xs font-light lg:text-sm">{props.role}</p>
+			<p className="text-sm lg:text-base">{props.highlights}</p>
 		</div>
 	)
 }

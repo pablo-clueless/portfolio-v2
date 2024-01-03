@@ -1,17 +1,14 @@
-import { IdentificationBadge } from "@phosphor-icons/react"
-
 import styles from "utils/styles"
 
 const About = () => {
 	return (
-		<section className="flex w-full flex-col px-5 lg:px-40">
+		<section className="w-full px-5 lg:px-40">
 			<div className="flex w-full flex-col py-10">
-				<p className={styles.heading}>
-					<IdentificationBadge />
-					About
+				<p className="bg-gradient-to-br from-primary to-secondary bg-clip-text py-2 text-5xl font-semibold text-transparent lg:text-9xl">
+					Developer. Crafting awesome UI. Building things.
 				</p>
 				<div className="my-10 flex w-full flex-col">
-					<p className="flex w-full flex-col gap-4 text-lg font-light text-dark lg:w-2/3 lg:text-xl">
+					<p className="flex w-full flex-col gap-4 text-sm text-dark lg:text-lg">
 						<span>
 							Samson Okunola is a developer with over 3 years experience in design and development. He was
 							born and raised in Lagos, Nigeria. He is a lover of the web and the endless possibilities of

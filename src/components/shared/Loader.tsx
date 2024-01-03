@@ -2,10 +2,10 @@ import "./loader.css"
 
 const Loader = () => {
 	return (
-		<div className="loader">
-			<div className="progress">
-				<div className="progress-bar"></div>
-			</div>
+		<div className="fixed left-0 top-0 grid h-screen w-screen place-items-center bg-white">
+			<svg viewBox="25 25 50 50" className="loader">
+				<circle r="20" cx="50" cy="50" className="loader-circle" />
+			</svg>
 		</div>
 	)
 }

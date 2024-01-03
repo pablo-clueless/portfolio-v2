@@ -23,11 +23,10 @@ const Projects = () => {
 				<Kanban />
 				Projects
 			</p>
-			<div className="mt-10 grid w-full grid-cols-1 gap-x-5 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
-				{projects.map((project, index) => {
-					const i = index + 1 < 10 ? `0${index + 1}` : index + 1
-					return <Card key={project.id} data={project} index={`${i}`} />
-				})}
+			<div className="mt-10 flex w-full flex-col items-center gap-20">
+				{projects.map((project, index) => (
+					<Card key={project.id} data={project} index={index + 1} />
+				))}
 			</div>
 		</main>
 	)

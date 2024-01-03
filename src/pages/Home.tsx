@@ -1,7 +1,7 @@
 import { gql, useQuery } from "@apollo/client"
 import { useEffect, useState } from "react"
 
-import { About, Blogs, Contact, Hero, Works } from "./partials"
+import { About, Blogs, Contact, Work, Works } from "./partials"
 import { Publication } from "../../generated/graphql"
 import { useScrollToTop } from "hooks"
 import { Loader } from "components"
@@ -45,9 +45,8 @@ const All = () => {
 
 	return (
 		<>
-			<Hero />
 			<About />
-			{/* <Work /> */}
+			<Work />
 			<Works />
 			{publication && <Blogs publication={publication} />}
 			<Contact />

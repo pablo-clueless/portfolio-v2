@@ -1,4 +1,4 @@
-import { ArrowRight, Newspaper } from "@phosphor-icons/react"
+import { ArrowRight } from "@phosphor-icons/react"
 import { Link } from "react-router-dom"
 
 import { PostEdge, Publication } from "../../../generated/graphql"
@@ -12,10 +12,7 @@ interface Props {
 const Blogs = (props: Props) => {
 	return (
 		<section className="flex h-full w-full flex-col px-5 py-10 lg:px-40">
-			<p className={styles.heading}>
-				<Newspaper />
-				blog
-			</p>
+			<p className={styles.heading}>blog</p>
 			<div className="mt-5 grid w-full grid-cols-1 gap-4 lg:grid-cols-4">
 				{props.publication?.posts?.edges
 					.map((post: PostEdge) => <BlogCard key={post.node.id} {...post} />)

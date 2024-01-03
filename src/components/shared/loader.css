@@ -1,41 +1,37 @@
 .loader {
-	width: 100dvw;
-	height: 100dvh;
-	position: fixed;
-	top: 0;
-	left: 0;
-	display: grid;
-	place-items: center;
-	background: var(--dark);
+	width: 3.25em;
+	transform-origin: center;
+	animation: rotate 2s linear infinite;
 }
 
-.progress,
-.progress-bar {
-	height: 4px;
-	border-radius: 4px;
+.loader-circle {
+	fill: none;
+	stroke: var(--primary);
+	stroke-width: 4px;
+	stroke-dasharray: 1, 200;
+	stroke-dashoffset: 0;
+	stroke-linecap: round;
+	animation: dash 1.5s ease-in-out infinite;
 }
 
-.progress {
-	width: 75%;
-	background: var(--light);
-	position: relative;
-	overflow: hidden;
-}
-
-.progress-bar {
-	width: 10%;
-	background: var(--primary);
-	position: absolute;
-	top: 0;
-	left: 0;
-	animation: slider 1500ms infinite;
-}
-
-@keyframes slider {
-	from {
-		left: 0;
+@keyframes rotate {
+	100% {
+		transform: rotate(360deg);
 	}
-	to {
-		left: 100%;
+}
+
+@keyframes dash {
+	0% {
+		stroke-dasharray: 1, 200;
+		stroke-dashoffset: 0;
+	}
+
+	50% {
+		stroke-dasharray: 90, 200;
+		stroke-dashoffset: -35px;
+	}
+
+	100% {
+		stroke-dashoffset: -125px;
 	}
 }

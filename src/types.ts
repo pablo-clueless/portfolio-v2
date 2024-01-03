@@ -1,17 +1,18 @@
 export type ProjectProps = {
 	category: string
 	id: string
-	image: string
+	image: string[]
 	title: string
 	url: string
 	color: string
+	stacks: string[]
 }
 
 export type ExperiencesProps = {
 	id: string
 	company: string
 	role: string
-	image: string
+	active: boolean
 	date: string
 	highlights: string
 }

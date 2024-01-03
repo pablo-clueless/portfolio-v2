@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=IBM+Plex+Mono:ital,wght@0,300;0,400;1,300;1,400&family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -13,9 +13,12 @@
 
 	--primary: #3a53e4;
 	--secondary: #fa2945;
-	--light: #f5f5f8;
+	--light: #fbfbfb;
 	--mid: #dde0e7;
-	--dark: #29292b;
+	--dark-400: #151419;
+	--dark-300: #1b1b1e;
+	--dark-200: #262626;
+	--dark-100: #878787;
 }
 
 /* removes scrollbar */
@@ -27,7 +30,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-family: "Jost", sans-serif;
+	font-family: "Space Grotesk", sans-serif;
 }
 
 html {
@@ -38,6 +41,10 @@ body {
 	background: var(--light);
 	overflow-x: hidden;
 	user-select: none;
+}
+
+p {
+	color: var(--dark-400);
 }
 
 /* actives the hover effect on the bav links */
@@ -52,7 +59,7 @@ body {
 	right: 0;
 	width: 0;
 	height: 2px;
-	background: var(--dark);
+	background: var(--dark-400);
 	transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -76,12 +83,14 @@ body {
 
 /* transition */
 .trs {
-	@apply transition-all duration-500;
+	transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* flex */
 .row {
-	@apply flex items-center gap-2;
+	display: flex;
+	align-items: center;
+	gap: 8px;
 }
 
 /* markdown content */
@@ -148,4 +157,11 @@ body {
 .markdown a {
 	color: #1e2a6a;
 	text-decoration: underline;
+}
+
+/* border text */
+.stroked {
+	color: transparent;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: var(--primary);
 }

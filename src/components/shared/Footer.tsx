@@ -18,7 +18,7 @@ const Footer = () => {
 			<hr className="mt-10 w-full bg-light" />
 			<div className="flex w-full items-center justify-between text-xs lg:text-sm">
 				<p className="text-light">&copy;{new Date().getFullYear()}. All rights reserved.</p>
-				<p className="uppercase text-light">samson okunola</p>
+				<p className="text-light">samson okunola</p>
 			</div>
 		</footer>
 	)

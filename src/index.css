@@ -63,6 +63,14 @@ p {
 	transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+.link.primary::before {
+	background: var(--primary);
+}
+
+.link.secondary::before {
+	background: var(--secondary);
+}
+
 @media (hover: hover) and (pointer: fine) {
 	.link:hover::before {
 		left: 0;

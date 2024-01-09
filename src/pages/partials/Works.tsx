@@ -13,7 +13,7 @@ const Works = () => {
 				{projects
 					.map((project, index) => <Card key={project.id} data={project} index={index + 1} />)
 					.slice(0, 4)}
-				<Link to="/project" className="link group flex w-fit items-center gap-2 text-primary">
+				<Link to="/project" className="link primary group flex w-fit items-center gap-2 text-primary">
 					See all
 					<ArrowRight className="transition-all duration-300 group-hover:ml-3" />
 				</Link>

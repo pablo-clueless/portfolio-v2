@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import { Suspense } from "react"
 
-import { Blog, Blogs, Home, Projects } from "pages"
+import { Blog, Blogs, Home, Projects, Start } from "pages"
 import { useConcurrentTransition } from "hooks"
 import { Loader, MainLayout } from "components"
 
@@ -15,7 +15,8 @@ const Router = () => {
 					<Route index element={<Home />} />
 					<Route path="blog/" element={<Blogs />} />
 					<Route path="blog/:slug" element={<Blog />} />
-					<Route path="project" element={<Projects />} />
+					<Route path="projects" element={<Projects />} />
+					<Route path="start" element={<Start />} />
 				</Route>
 			</Routes>
 		</Suspense>

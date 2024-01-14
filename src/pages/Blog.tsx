@@ -1,5 +1,5 @@
-import { ArrowLeft, Article, Eye } from "@phosphor-icons/react"
 import { useNavigate, useParams } from "react-router-dom"
+import { ArrowLeft, Eye } from "@phosphor-icons/react"
 import { gql, useQuery } from "@apollo/client"
 import { useEffect, useState } from "react"
 import Prism from "prismjs"
@@ -67,10 +67,7 @@ const Blog = () => {
 			</div>
 			{publication && (
 				<div className="w-full">
-					<p className={styles["blog-title"]}>
-						<Article />
-						{publication.post?.title}
-					</p>
+					<p className={styles["blog-title"]}>{publication.post?.title}</p>
 					<div className="flex w-full flex-col items-start justify-between lg:flex-row lg:items-center">
 						<p className={styles["blog-subtitle"]}>{publication.post?.subtitle}</p>
 						<p className={styles["blog-subtitle"]}>

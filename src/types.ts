@@ -1,11 +1,22 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
+import { ComponentProps } from "react"
+
 export type ProjectProps = {
 	category: string
 	id: string
 	image: string[]
 	title: string
+	subtitle: string
 	url: string
 	color: string
 	stacks: string[]
+	meta: {
+		title: string
+		description: string
+		client: string
+		sector: string
+		year: string
+	}
 }
 
 export type ExperiencesProps = {
@@ -23,13 +34,35 @@ export type ArchiveProps = {
 	title: string
 }
 
-type LordIconTrigger = "hover" | "click" | "loop" | "loop-on-hover" | "morph" | "morph-two-way"
+export type LordIconTrigger =
+	| "in"
+	| "hover"
+	| "click"
+	| "loop"
+	| "loop-on-hover"
+	| "morph"
+	| "morph-two-way"
+
+export type LordIconState =
+	| "in-reveal"
+	| "hover-slide"
+	| "hover-rise"
+	| "loop-roll"
+	| "morph-slide"
+	| "morph-two-way-slide"
+
+export type LordIconColors = {
+	primary?: string
+	secondary?: string
+}
 
 type LordIconProps = {
 	src?: string
+	state?: LordIconState
 	trigger?: LordIconTrigger
-	colors?: string
 	delay?: string | number
+	size?: number
+	stroke?: "regular" | "bold"
 }
 
 type LordIconElement = React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> &
@@ -43,3 +76,30 @@ declare global {
 		}
 	}
 }
+
+export type InputProps =
+	| (Omit<ComponentProps<"input">, "type"> & {
+			as?: "input"
+			label?: React.ReactNode
+			icon?: JSX.Element
+			error?: string
+			/** Tailwind width e.g., w-5, w-[200px] */
+			width?: string
+			typed: React.InputHTMLAttributes<HTMLInputElement>["type"]
+	  })
+	| (ComponentProps<"textarea"> & {
+			as: "textarea"
+			label?: React.ReactNode
+			icon?: JSX.Element
+			error?: string
+			/** Tailwind width e.g., w-5, w-[200px] */
+			width?: string
+	  })
+	| (ComponentProps<"select"> & {
+			as: "select"
+			label?: React.ReactNode
+			icon?: JSX.Element
+			error?: string
+			/** Tailwind width e.g., w-5, w-[200px] */
+			width?: string
+	  })

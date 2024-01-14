@@ -1,9 +1,9 @@
 import { defineElement } from "lord-icon-element"
 import Lottie from "lottie-web"
 
-defineElement(Lottie.loadAnimation)
+import type { LordIconState, LordIconTrigger } from "types"
 
-type LordIconTrigger = "hover" | "click" | "loop" | "loop-on-hover" | "morph" | "morph-two-way"
+defineElement(Lottie.loadAnimation)
 
 type LordIconColors = {
 	primary?: string
@@ -12,16 +12,18 @@ type LordIconColors = {
 
 type LordIconProps = {
 	src?: string
+	state?: LordIconState
 	trigger?: LordIconTrigger
 	colors?: LordIconColors
 	delay?: number
 	size?: number
+	stroke?: "regular" | "bold"
 }
 
 export const LordIcon = ({ colors, delay, size, src, trigger }: LordIconProps) => {
 	return (
 		<lord-icon
-			colors={`primary:${colors?.primary},secondary:${colors?.secondary}`}
+			color={`primary:${colors?.primary},secondary:${colors?.secondary}`}
 			src={src}
 			trigger={trigger}
 			delay={delay}

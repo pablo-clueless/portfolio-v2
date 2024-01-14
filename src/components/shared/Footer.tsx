@@ -1,24 +1,14 @@
 import { BrandLineDark } from "assets/images"
-import { handles } from "constants"
 
 const Footer = () => {
 	return (
-		<footer className="flex w-full flex-col items-center gap-5 bg-dark-400 px-5 pb-4 pt-16 lg:px-40">
-			<img src={BrandLineDark} alt="" className="w-[150px]" />
-			<div className="mt-10 flex w-2/3 items-center justify-between gap-4 lg:w-1/3">
-				{handles.map((handle) => (
-					<a
-						key={handle.url}
-						href={handle.url}
-						className="text-xl text-light transition-all duration-300 hover:scale-[1.2] hover:text-secondary lg:text-3xl">
-						{handle.icon}
-					</a>
-				))}
-			</div>
-			<hr className="mt-10 w-full bg-light" />
+		<footer className="flex w-full flex-col items-center gap-5 bg-dark-400 px-5 py-4 lg:px-40">
 			<div className="flex w-full items-center justify-between text-xs lg:text-sm">
+				<div className="flex items-center gap-1">
+					<img src={BrandLineDark} alt="" className="w-6" />
+					<p className="text-light">Samson Okunola</p>
+				</div>
 				<p className="text-light">&copy;{new Date().getFullYear()}. All rights reserved.</p>
-				<p className="text-light">samson okunola</p>
 			</div>
 		</footer>
 	)

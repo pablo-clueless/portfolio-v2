@@ -1,4 +1,4 @@
-import { ArrowLeft, Newspaper } from "@phosphor-icons/react"
+import { ArrowLeft } from "@phosphor-icons/react"
 import { gql, useQuery } from "@apollo/client"
 import { useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
@@ -76,11 +76,8 @@ const AllBlogs = () => {
 					Back
 				</button>
 			</div>
-			<p className={styles.heading}>
-				<Newspaper />
-				blog
-			</p>
-			<div className="mt-10 grid w-full grid-cols-1 gap-4 lg:grid-cols-4">
+			<p className={styles.heading}>blog</p>
+			<div className="mt-10 grid w-full grid-cols-1 gap-4">
 				{publication &&
 					publication.posts.edges
 						.map((post: PostEdge) => <BlogCard key={post.node.id} {...post} />)

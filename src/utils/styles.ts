@@ -1,5 +1,5 @@
 export default {
-	heading: "capitalize text-2xl lg:text-5xl text-primary font-bold w-fit flex items-center gap-2",
+	heading: "capitalize text-2xl lg:text-5xl text-primary font-light w-fit flex items-center gap-2",
 	subheading: "text-sm lg:text-lg text-secondary font-light",
 	title: "font-extralight uppercase text-white/60",
 	link: "text-secondary font-medium link trs secondary",

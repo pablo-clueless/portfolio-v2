@@ -21,10 +21,10 @@ const Navbar = () => {
 
 	return (
 		<header className="flex w-screen flex-col bg-light">
-			<nav className="flex w-screen flex-col items-start gap-2 border-b border-gray-400 px-5 py-10 lg:flex-row lg:items-baseline lg:justify-between lg:px-40 lg:py-14">
+			<nav className="flex w-screen flex-col items-start gap-2 border-b border-gray-400 px-5 py-5 lg:flex-row lg:items-center lg:justify-between lg:px-40 lg:py-10">
 				<Link to="/" className="flex items-center gap-2">
-					<img src={BrandLineLight} alt="" className="w-10 lg:w-20" />
-					<p className="text-3xl font-light uppercase text-dark lg:text-7xl">Samson okunola</p>
+					<img src={BrandLineLight} alt="" className="w-5 lg:w-10" />
+					<p className="text-xl font-semibold uppercase text-dark lg:text-4xl">Samson okunola</p>
 				</Link>
 				<p className="flex items-center gap-1 text-xs font-medium lg:text-sm">
 					<Globe />

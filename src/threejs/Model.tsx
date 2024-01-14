@@ -5,7 +5,7 @@ const Model = () => {
 		<group>
 			<mesh
 				castShadow
-				geometry={new THREE.BoxGeometry()}
+				geometry={new THREE.BoxGeometry(1, 1, 1)}
 				material={new THREE.MeshStandardMaterial()}
 				dispose={null}></mesh>
 		</group>

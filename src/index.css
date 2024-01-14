@@ -47,9 +47,36 @@ p {
 	color: var(--dark-400);
 }
 
+input,
+select,
+textarea {
+	outline: none;
+}
+
+canvas {
+	width: 100%;
+	height: 100%;
+}
+
+/* button */
+.button {
+	width: fit-content;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	padding: 0.5rem 1rem;
+	transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.button:active {
+	transform: scale(0.98);
+}
+
 /* actives the hover effect on the bav links */
 .link {
 	position: relative;
+	width: fit-content;
 }
 
 .link::before {
@@ -60,7 +87,7 @@ p {
 	width: 0;
 	height: 2px;
 	background: var(--dark-400);
-	transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+	transition: width 1000ms cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .link.primary::before {

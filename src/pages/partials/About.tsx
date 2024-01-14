@@ -1,9 +1,10 @@
 import styles from "utils/styles"
+// import Scene from "threejs"
 
 const About = () => {
 	return (
-		<section className="w-full px-5 lg:px-40">
-			<div className="flex w-full flex-col py-10">
+		<section className="w-full px-5 py-10 lg:px-40">
+			<div className="flex w-full flex-col">
 				<p className="bg-gradient-to-br from-primary to-secondary bg-clip-text py-2 text-5xl font-semibold text-transparent lg:text-9xl">
 					Developer. Crafting awesome UI. Building things. Making awesome products.
 				</p>

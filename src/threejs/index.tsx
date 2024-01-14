@@ -1,4 +1,4 @@
-import { Environment } from "@react-three/drei"
+import { CameraControls } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber"
 
 import CameraRig from "./CameraRig"
@@ -8,13 +8,13 @@ const Scene = () => {
 	return (
 		<Canvas
 			shadows
-			camera={{ position: [0, 0, 0], fov: 25 }}
+			camera={{ position: [0, 0, 1], fov: 25 }}
 			gl={{ preserveDrawingBuffer: true }}
-			className="h-full w-full max-w-full transition-all ease-in">
-			<Environment preset="city" />
+			className="h-screen w-screen">
 			<CameraRig>
 				<Model />
 			</CameraRig>
+			<CameraControls />
 		</Canvas>
 	)
 }

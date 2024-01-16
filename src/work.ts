@@ -8,7 +8,7 @@ export const work: ExperiencesProps[] = [
 		active: true,
 		date: "Nov 2023 - Active",
 		highlights:
-			"At Onboard, I am tasked with keeping the website running at optimum conditions, adding new features and syncing with the designer, backend developer and marketing team.",
+			"At Onboard, I am tasked with keeping the website running at optimum conditions, adding new features and syncing with the designer, backend developer and marketing team to make sure we give users the best experience possible.",
 	},
 	{
 		id: "3e1a08e7-2690-4c03-bd41-6fb415e7c2cc",
@@ -17,7 +17,7 @@ export const work: ExperiencesProps[] = [
 		active: false,
 		date: "Apr 2022 - Nov 2023",
 		highlights:
-			"Major contributor to Zapi v1 and v2. As the lead developer I introduced tools, procedures and processes that ensure faster and better development. I ran and participated in code reviews and peering development.",
+			"Major contributor to Zapi v1 and v2. As the lead developer I introduced tools, procedures and processes that ensure faster and better development. I ran and participated in code reviews and peer development.",
 	},
 	{
 		id: "e5bae1ed-9203-487d-83da-005d61f34363",

@@ -10,6 +10,7 @@ export { default as threejs_shaders } from "./threejs-shaders.png"
 export { default as traxo } from "./traxo.png"
 export { default as tsl } from "./tsl.png"
 export { default as zummit_ai } from "./zummit-ai.png"
+export { default as traxo_hq } from "./traxo-hq.png"
 
 export { default as BrandLineDark } from "./brand-line-dark.png"
 export { default as BrandLineLight } from "./brand-line-light.png"

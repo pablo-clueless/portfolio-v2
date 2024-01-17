@@ -43,6 +43,10 @@ body {
 	user-select: none;
 }
 
+img {
+	image-rendering: crisp-edges -moz-crisp-edges;
+}
+
 p {
 	color: var(--dark-400);
 }

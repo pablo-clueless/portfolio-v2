@@ -19,13 +19,4 @@ export const work: ExperiencesProps[] = [
 		highlights:
 			"Major contributor to Zapi v1 and v2. As the lead developer I introduced tools, procedures and processes that ensure faster and better development. I ran and participated in code reviews and peer development.",
 	},
-	{
-		id: "e5bae1ed-9203-487d-83da-005d61f34363",
-		company: "Kappari Enterprise",
-		role: "Frontend Developer",
-		active: false,
-		date: "Jul 2020 - Jan 2022",
-		highlights:
-			"Buiding and maintaining web applications, collaborating with designers, product managers, and other developers to create high-quality products, ensuring scalability, responsive design and cross-browser compatibility.",
-	},
 ]

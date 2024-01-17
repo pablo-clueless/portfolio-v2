@@ -154,7 +154,7 @@ export const projects: ProjectProps[] = [
 			sector: "software",
 			description:
 				"Three-Shirt is a website that allows users to create mockups of shirts. It allows adding logo, text, and images to your mockup.",
-			year: "2021",
+			year: "2023",
 		},
 	},
 	// {

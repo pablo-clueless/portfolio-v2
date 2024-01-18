@@ -1,15 +1,11 @@
-import { ArrowSquareOut } from "@phosphor-icons/react"
 import { Fragment } from "react"
 
 import type { ProjectProps } from "types"
 
 const Card = (props: ProjectProps) => {
 	return (
-		<div className="group relative w-full">
-			<div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl border">
-				<span className="absolute left-4 top-4 !z-[1] rounded-2xl bg-dark-400/60 px-3 text-xs uppercase text-light shadow-xl lg:text-sm">
-					{props.category}
-				</span>
+		<div className="group relative w-full lg:w-[464px]">
+			<div className="aspect-[3/2] w-full overflow-hidden rounded-t-2xl border">
 				<img
 					src={props.image[0]}
 					alt={props.title}
@@ -17,10 +13,9 @@ const Card = (props: ProjectProps) => {
 				/>
 			</div>
 			<div className="mt-1 flex w-full flex-col px-2">
-				<div className="flex w-full items-center justify-between">
-					<p className="text-base font-medium lg:text-xl">{props.title}</p>
-					<a href={props.url} target="_blank" className="text-xl">
-						<ArrowSquareOut className="transition-all duration-500 ease-in-out group-hover:scale-125" />
+				<div className="mb-1 flex w-full items-center justify-between">
+					<a href={props.url} target="_blank" className="link text-base font-medium lg:text-lg">
+						{props.title}
 					</a>
 				</div>
 				<p className="text-[10px] capitalize text-dark-300 lg:text-xs">

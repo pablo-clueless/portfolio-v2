@@ -1,4 +1,4 @@
-import { ArrowUpRight, Envelope } from "@phosphor-icons/react"
+import { CodepenLogo, TwitterLogo, Envelope, GithubLogo, LinkedinLogo } from "@phosphor-icons/react"
 
 export const links = [
 	{ label: "home", to: "/" },
@@ -10,33 +10,27 @@ export const links = [
 
 export const handles = [
 	{
-		icon: <ArrowUpRight />,
+		icon: <CodepenLogo />,
 		name: "codepen",
 		url: "https://codepen.io/pablo-clueless",
 		handle: "@pablo-clueless",
 	},
 	{
-		icon: <ArrowUpRight />,
+		icon: <GithubLogo />,
 		name: "github",
 		url: "https://github.com/pablo-clueless",
 		handle: "@pablo-clueless",
 	},
 	{
-		icon: <ArrowUpRight />,
+		icon: <LinkedinLogo />,
 		name: "linkedin",
 		url: "https://linkedin.com/in/samson-okunola/",
 		handle: "samson-okunola",
 	},
 	{
-		icon: <ArrowUpRight />,
+		icon: <TwitterLogo />,
 		name: "twitter",
 		url: "https://twitter.com/pablo_clueless",
-		handle: "@pablo_clueless",
-	},
-	{
-		icon: <ArrowUpRight />,
-		name: "discord",
-		url: "https://discord.com/users/@pablo_clueless",
 		handle: "@pablo_clueless",
 	},
 	{

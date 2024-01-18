@@ -1,18 +1,6 @@
 import type { ProjectProps } from "types"
 
-import {
-	chatt,
-	ebaba,
-	koin,
-	nexus,
-	olonagirl,
-	onboard,
-	three_shirt,
-	traxo,
-	traxo_hq,
-	tsl,
-	zummit_ai,
-} from "assets/images"
+import { chatt, olonagirl, onboard, three_shirt, traxo, zummit_ai } from "assets/images"
 
 export const projects: ProjectProps[] = [
 	{
@@ -86,42 +74,6 @@ export const projects: ProjectProps[] = [
 		},
 	},
 	{
-		id: "",
-		title: "TraxoHQ",
-		subtitle: "",
-		image: [traxo_hq],
-		url: "https://traxo-hq.vercel.app",
-		category: "website",
-		color: "#20DA91",
-		stacks: ["react", "tailwind", "framer-motion", "vite"],
-		meta: {
-			title: "",
-			client: "",
-			sector: "Education",
-			description: "",
-			year: "2023",
-		},
-	},
-	{
-		id: "aba25bc6-2e78-432b-aa4c-430e9d95e0b7",
-		title: "Koin",
-		subtitle: "",
-		image: [koin],
-		url: "https://koin-token.vercel.app",
-		category: "website",
-		color: "#6366F1",
-		stacks: ["react", "tailwind", "framer-motion", "vite"],
-		meta: {
-			title:
-				"A cryptocurrency that allows users to exchange their cryptocurrencies for other cryptocurrencies.",
-			client: "Koin",
-			sector: "e-commerce",
-			description:
-				"Koin is a cryptocurrency that allows users to exchange their cryptocurrencies for other cryptocurrencies. It is a cryptoc",
-			year: "2021",
-		},
-	},
-	{
 		id: "54aa9973-0f32-4dff-8075-936425b14070",
 		title: "Chatt",
 		subtitle: "",
@@ -154,60 +106,6 @@ export const projects: ProjectProps[] = [
 			sector: "software",
 			description:
 				"Three-Shirt is a website that allows users to create mockups of shirts. It allows adding logo, text, and images to your mockup.",
-			year: "2023",
-		},
-	},
-	{
-		id: "27e5f209-5a6a-456a-bd6f-5289bb149744",
-		title: "TSL",
-		subtitle: "",
-		image: [tsl],
-		url: "https://tech-solutions.vercel.app",
-		category: "website",
-		color: "#FE0807",
-		stacks: ["react", "tailwind", "framer-motion", "vite"],
-		meta: {
-			title: "Affordable logistics solutions.",
-			client: "TSL",
-			sector: "logistics",
-			description:
-				"TSL is a logistics solutions for small and medium businesses. They help businesses to send and receive goods between Europe, Asia, the Americas and Africa. They have fast and reliable delivery services.",
-			year: "2023",
-		},
-	},
-	{
-		id: "b3a99d3b-149e-4f53-9422-0f3c8b740aa4",
-		title: "ebaba",
-		subtitle: "",
-		image: [ebaba],
-		url: "https://ebaba-gray.vercel.app/",
-		category: "website",
-		color: "#1E2746",
-		stacks: ["react", "tailwind", "vite"],
-		meta: {
-			title: "Get professionals without hassle.",
-			client: "ebaba",
-			sector: "e-commerce",
-			description:
-				"Ebaba helps connect users to professionals with the right skills and experience. It helps users to find the right professionals for their needs.",
-			year: "2022",
-		},
-	},
-	{
-		id: "fda6c4ce-1b05-4580-bc6f-491a946db4a1",
-		title: "Nexus",
-		subtitle: "",
-		image: [nexus],
-		url: "https://nexus-llc.vercel.app/",
-		category: "digital product",
-		color: "#3A53E4",
-		stacks: ["react", "tailwind", "framer-motion", "vite"],
-		meta: {
-			title: "Discover APIs. Monitize your projects. Automate your workflows.",
-			client: "Side Project",
-			sector: "software",
-			description:
-				"Nexus is a marketplace for APIs. It allows users to discover APIs, monitize their projects, and automate subscriptions, users, and projects workflows.",
 			year: "2023",
 		},
 	},

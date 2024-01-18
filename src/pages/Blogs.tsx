@@ -8,7 +8,7 @@ import { BlogCard, Loader, Pagination } from "components"
 import { usePageTitle, useScrollToTop } from "hooks"
 import styles from "utils/styles"
 
-const PAGE_SIZE = 12
+const PAGE_SIZE = 18
 
 const AllBlogs = () => {
 	const [publication, setPublication] = useState<Publication>()
@@ -77,7 +77,7 @@ const AllBlogs = () => {
 				</button>
 			</div>
 			<p className={styles.heading}>blog</p>
-			<div className="mt-10 grid w-full grid-cols-1 gap-4">
+			<div className="mt-10 grid w-full grid-cols-3 gap-3 lg:min-h-[590px] lg:grid-cols-6">
 				{publication &&
 					publication.posts.edges
 						.map((post: PostEdge) => <BlogCard key={post.node.id} {...post} />)

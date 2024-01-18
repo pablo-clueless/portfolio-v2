@@ -21,7 +21,7 @@ export const projects: ProjectProps[] = [
 		subtitle: "",
 		image: [olonagirl],
 		url: "https://olonagirl.vercel.app/",
-		category: "e-commerce website",
+		category: "e-commerce",
 		color: "#FFEA00",
 		stacks: ["nextjs", "tailwind", "framer-motion", "commercejs"],
 		meta: {
@@ -30,7 +30,7 @@ export const projects: ProjectProps[] = [
 			sector: "e-commerce",
 			description:
 				"Olonagirl is a platform to buy and sell clothes online. It is a platform that connects people to buy and sell clothes, and helps them to find the right clothes for them.",
-			year: "2023",
+			year: "2024",
 		},
 	},
 	{
@@ -157,23 +157,6 @@ export const projects: ProjectProps[] = [
 			year: "2023",
 		},
 	},
-	// {
-	// 	id: "b7133a22-8755-4487-bb73-98f7c60addfc",
-	// 	title: "Admin Dashboard",
-	// 	subtitle: "",
-	// 	image: [dashboard],
-	// 	url: "https://c-dashboard.vercel.app",
-	// 	category: "website",
-	// 	color: "#FB9678",
-	// 	stacks: ["react", "tailwind", "syncfusion", "vite"],
-	// 	meta: {
-	// 		title: "",
-	// 		client: "",
-	// 		sector: "",
-	// 		description: "",
-	// 		year: "",
-	// 	}
-	// },
 	{
 		id: "27e5f209-5a6a-456a-bd6f-5289bb149744",
 		title: "TSL",
@@ -210,24 +193,6 @@ export const projects: ProjectProps[] = [
 			year: "2022",
 		},
 	},
-	// {
-	// 	id: "c80ccf01-4355-401e-b0f6-8abbf8d2e47d",
-	// 	title: "Threejs Shaders",
-	// 	subtitle: "",
-	// 	image: [threejs_shaders],
-	// 	url: "https://threejs-shaders-rgb-effect.vercel.app/",
-	// 	category: "website",
-	// 	color: "#394C6E",
-	// 	stacks: ["react", "tailwind", "framer-motion"],
-	// 	meta: {
-	// 		title:
-	// 			"I love art. And web development. I love shaders. So I made this website to share them with the world.",
-	// 		client: "Side Project",
-	// 		sector: "art",
-	// 		description: "A collection of art made with Threejs shaders.",
-	// 		year: "2021",
-	// 	},
-	// },
 	{
 		id: "fda6c4ce-1b05-4580-bc6f-491a946db4a1",
 		title: "Nexus",

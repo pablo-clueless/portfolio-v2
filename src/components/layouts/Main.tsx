@@ -4,13 +4,13 @@ import { Footer, Navbar } from "components"
 
 const Main = () => {
 	return (
-		<div className="h-screen w-screen overflow-x-hidden">
+		<main className="h-screen w-screen">
 			<Navbar />
-			<div className="w-full overflow-x-hidden">
+			<div className="w-full">
 				<Outlet />
 			</div>
 			<Footer />
-		</div>
+		</main>
 	)
 }
 

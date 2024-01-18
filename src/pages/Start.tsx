@@ -122,7 +122,9 @@ const Start = () => {
 							label="Optionally, share additional description"
 							error={errors.description}
 							placeholder="Product details"></Input>
-						<button type="submit" className="button bg-dark-400 text-light">
+						<button
+							type="submit"
+							className="button max-w-fit border border-dark-400 bg-dark-400 text-light transition-all duration-500  hover:bg-light hover:text-dark-400">
 							{isPending ? <Spinner /> : "Send inquiry"}
 						</button>
 					</form>
